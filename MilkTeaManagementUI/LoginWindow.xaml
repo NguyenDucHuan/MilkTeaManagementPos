@@ -41,11 +41,11 @@
 
         <Button x:Name="LoginButton" Content="Login" Grid.Row="3" Margin="287,20,0,0"
                 Style="{StaticResource MaterialDesignRaisedButton}"
-                Command="{Binding LoginCommand}" HorizontalAlignment="Left" Width="72"/>
+                Command="{Binding LoginCommand}" HorizontalAlignment="Left" Width="72" Click="LoginButton_Click"/>
 
         <Button x:Name="QuitButton" Content="Quit" Grid.Row="3" Margin="380,20,0,0"
                 Style="{StaticResource MaterialDesignRaisedButton}"
-                Command="{Binding QuitCommand}" HorizontalAlignment="Left" Width="74"/>
+                Command="{Binding QuitCommand}" HorizontalAlignment="Left" Width="74" Click="QuitButton_Click"/>
 
         <TextBlock Text="Version 1.0" Grid.Row="5" HorizontalAlignment="Center"
                    VerticalAlignment="Bottom" FontSize="12" Foreground="Gray"/>

@@ -8,9 +8,9 @@ namespace MilkTeaManagement.BLL.Services
     {
         private readonly LoginRepository _repository;
 
-        public LoginServices(LoginRepository repository)
+        public LoginServices()
         {
-            _repository = repository;
+            _repository = new LoginRepository();
         }
 
         public bool CheckLoginUser(string userName, string password)
