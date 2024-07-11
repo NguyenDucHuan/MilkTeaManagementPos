@@ -39,7 +39,7 @@ namespace MilkTeaManagementUI
             }
             else
             {
-                MessageBox.Show("Unable to save file, try again.", "Save error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Wrong UserName or password", "Login Faild!!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }

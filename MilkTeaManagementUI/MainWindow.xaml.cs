@@ -22,6 +22,7 @@ namespace MilkTeaManagementUI
     {
         private ProductService _productService;
         private EmployeeService _employeeService;
+        private TableService _tableService;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,20 +40,30 @@ namespace MilkTeaManagementUI
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            _productService = new ProductService();
-            _employeeService = new EmployeeService();
-            if (Application.Current.Properties.Contains("LoggedInEmpID"))
-            {
-                long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
-                var loginEmp = _employeeService.GetLoginEmployee(loggedInEmpID);
-                LoginEmpNameTextBox.Text = loginEmp.FullName;
-                string vvvv = loginEmp.FullName;
-                var products = _productService.GetAllProductList();
-                DataContext = this;
-                ListViewProduct.ItemsSource = products;
-            }
+            LoadMenu();
+            LoadLoginUser();
+            LoadTableLMenu();
         }
 
+        public void LoadMenu()
+        {
+            _productService = new ProductService();
+            var products = _productService.GetAllProductList();
+            DataContext = this;
+            ListViewProduct.ItemsSource = products;
+        }
+        public void LoadLoginUser()
+        {
+            _employeeService = new EmployeeService();
+            long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
+            var loginEmp = _employeeService.GetLoginEmployee(loggedInEmpID);
+            LoginEmpNameTextBox.Text = loginEmp.FullName;
+        }
+        public void LoadTableLMenu()
+        {
+            _tableService = new TableService();
+            ListViewTable.ItemsSource = _tableService.GetTableList();
+        }
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();

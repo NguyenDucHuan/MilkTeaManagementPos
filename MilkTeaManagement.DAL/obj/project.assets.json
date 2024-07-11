@@ -4411,23 +4411,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Soram\\.nuget\\packages\\": {},
+    "C:\\Users\\subih\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
+      "projectUniqueName": "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
       "projectName": "MilkTeaManagement.DAL",
-      "projectPath": "D:\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
-      "packagesPath": "C:\\Users\\Soram\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\obj\\",
+      "projectPath": "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
+      "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
+      "outputPath": "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Soram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\subih\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4505,7 +4505,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
