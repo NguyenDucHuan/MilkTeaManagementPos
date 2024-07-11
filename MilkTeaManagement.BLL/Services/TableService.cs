@@ -1,10 +1,5 @@
 ﻿using MilkTeaManagement.DAL.Entities;
 using MilkTeaManagement.DAL.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MilkTeaManagement.BLL.Services
 {
@@ -17,5 +12,13 @@ namespace MilkTeaManagement.BLL.Services
             _repo = new TableRepository();
             return _repo.GetAll();
         }
+
+        public List<TbTable> GetTableByGroup(long idGroup)
+        {
+            _repo = new TableRepository();
+            return _repo.GetTableByGroup(idGroup);
+        }
+
+
     }
 }

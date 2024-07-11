@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="800" Width="1080" Foreground="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+        mc:Ignorable="d" Height="1080" Width="1920" Foreground="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -47,16 +47,16 @@
             </StackPanel>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Thu ngân trà sữa</TextBlock>
         </Grid>
-        <Grid x:Name="GridContent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="335" Width="1010" Margin="0,0,0,400">
-            <Grid x:Name="GridProductOrder" Margin="0,0,0,-13" >
+        <Grid x:Name="GridContent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="1005" Width="1825" Margin="0,0,0,10">
+            <Grid x:Name="GridProductOrder" Margin="10,10,10,10" RenderTransformOrigin="0.732,0.805" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="61*"/>
                     <ColumnDefinition Width="515*"/>
                     <ColumnDefinition Width="434*"/>
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Column="0" Background="#EAEAEA" Margin="10,10,2,-53" Padding="10" Grid.ColumnSpan="2">
-                    <StackPanel>
+                <Border Background="#EAEAEA" Margin="0,0,0,401" Padding="10" HorizontalAlignment="Center" Width="1026" Grid.ColumnSpan="2">
+                    <StackPanel HorizontalAlignment="Left" Width="994">
                         <TextBlock Text="Product" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 10"/>
                         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                             <ListView x:Name="ListViewProduct" Background="White">
@@ -86,38 +86,44 @@
                         </ScrollViewer>
                     </StackPanel>
                 </Border>
-                <Border Background="#EAEAEA" Margin="10,406,2,-360" Padding="10" Grid.ColumnSpan="2">
-                    <StackPanel>
-                        <TextBlock Text="Table" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 10"/>
-                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                            <ListView x:Name="ListViewTable" Background="White">
-                                <ListView.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Columns="5" />
-                                    </ItemsPanelTemplate>
-                                </ListView.ItemsPanel>
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Border BorderBrush="#CCCCCC" BorderThickness="1" Margin="5">
-                                            <StackPanel>
-                                                <TextBlock Text="{Binding NameTb}" Margin="5 3" HorizontalAlignment="Center"/>
-                                                <TextBlock Text="{Binding TbGroupTb.Name}" Margin="5 3" HorizontalAlignment="Center"/>
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                                <ListView.ItemContainerStyle>
-                                    <Style TargetType="ListViewItem">
-                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
-                                    </Style>
-                                </ListView.ItemContainerStyle>
-                            </ListView>
-                        </ScrollViewer>
-                    </StackPanel>
+                <Border Background="#EAEAEA" Margin="2,589,2,0" Padding="10" Grid.ColumnSpan="2">
+                    <TabControl x:Name="TabControlGroups" SelectionChanged="TabControlGroups_SelectionChanged">
+                        <!-- Placeholder tab for initialization -->
+                        <TabItem Header="Loading..." IsEnabled="False">
+                            <StackPanel>
+                                <TextBlock Text="Table" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                    <ListView x:Name="ListViewTable" Background="White">
+                                        <ListView.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <UniformGrid Columns="5" />
+                                            </ItemsPanelTemplate>
+                                        </ListView.ItemsPanel>
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border BorderBrush="#CCCCCC" BorderThickness="1" Margin="5">
+                                                    <StackPanel>
+                                                        <TextBlock Text="{Binding NameTb}" Margin="5 3" HorizontalAlignment="Center"/>
+                                                        <TextBlock Text="{Binding TbGroupTb.Name}" Margin="5 3" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                        <ListView.ItemContainerStyle>
+                                            <Style TargetType="ListViewItem">
+                                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                            </Style>
+                                        </ListView.ItemContainerStyle>
+                                    </ListView>
+                                </ScrollViewer>
+                            </StackPanel>
+                        </TabItem>
+                    </TabControl>
                 </Border>
+
                 <!-- Order List -->
-                <Border Grid.Column="2" Background="#EAEAEA" Margin="3,10,10,-360" Padding="10">
+                <Border Grid.Column="2" Background="#EAEAEA" Margin="10,0,10,0" Padding="10">
                     <StackPanel>
                         <TextBlock Text="Order" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 10"/>
                         <ListView x:Name="ListViewOrder" Background="#FFFFFF">

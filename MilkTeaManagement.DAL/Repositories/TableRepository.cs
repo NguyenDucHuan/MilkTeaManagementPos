@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MilkTeaManagement.DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MilkTeaManagement.DAL.Repositories
 {
@@ -15,7 +10,13 @@ namespace MilkTeaManagement.DAL.Repositories
         public List<TbTable> GetAll()
         {
             _context = new MilkTeaContext();
-            return _context.TbTables.Include("TbGroupTb").ToList();
+            return _context.TbTables.Include(table => table.IdGroupNavigation).ToList();
+        }
+
+        public List<TbTable> GetTableByGroup(long idGroup)
+        {
+            _context = new MilkTeaContext();
+            return _context.TbTables.Include(table => table.IdGroupNavigation).Where(table => table.IdGroup == idGroup).ToList();
         }
     }
 }
