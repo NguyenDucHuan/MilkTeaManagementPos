@@ -1,32 +1,30 @@
-﻿using MilkTeaManagement.DAL.Entities;
-using MilkTeaManagement.DAL.Repositories;
+﻿using MilkTeaManagement.DAL.Repositories;
 using System.Security.Cryptography;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MilkTeaManagement.BLL.Services
 {
     public class LoginServices
     {
-        private LoginRepository _repository;
-        public LoginServices()
+        private readonly LoginRepository _repository;
+
+        public LoginServices(LoginRepository repository)
         {
-            this._repository = new LoginRepository();
+            _repository = repository;
         }
+
         public bool CheckLoginUser(string userName, string password)
         {
-            var loginUser = _repository.GetLogin(userName, password);
-            if (loginUser != null)
-                return true;
-            return false;
+            var loginUser = _repository.GetLogin(userName, HashString(password));
+            return loginUser != null;
         }
+
         public long GetEmployeeID(string userName, string password)
         {
-            return (long)_repository.GetLogin(userName, password).IdEmployee;
+            var loginUser = _repository.GetLogin(userName, HashString(password));
+            return loginUser?.IdEmployee ?? 0;
         }
+
         private string HashString(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -41,4 +39,5 @@ namespace MilkTeaManagement.BLL.Services
             }
         }
     }
+
 }
