@@ -2,16 +2,19 @@
 using MilkTeaManagement.DAL.Entities;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 namespace MilkTeaManagementUI
 {
     public partial class MainWindow : Window
     {
-        private ProductService _productService;
-        private EmployeeService _employeeService;
-        private TableService _tableService;
-        private TableGroupService _tableGroupService;
+        private ProductService _productService = new();
+        private EmployeeService _employeeService = new();
+        private TableService _tableService = new();
+        private TableGroupService _tableGroupService = new();
         private Dictionary<long, List<TbTable>> _tablesByGroupId;
+        public List<TbProduct> Products { get; set; }
+        public String Description { get; set; }
 
         public MainWindow()
         {
@@ -44,9 +47,8 @@ namespace MilkTeaManagementUI
 
         public void LoadTableGroups()
         {
-            _tableGroupService = new TableGroupService();
             var tableGroups = _tableGroupService.GetTableGroupList();
-            _tableService = new TableService();
+            //ListViewTables.ItemsSource = _tableService.GetTableList();
             ListViewTable.ItemsSource = _tableService.GetTableList();
 
             //if (tableGroups != null)
@@ -59,6 +61,7 @@ namespace MilkTeaManagementUI
             //        tabItem.Header = group.Name;
             //        tabItem.Tag = group.Id;
 
+
             //        ListView listView = new ListView();
             //        listView.Name = $"ListViewTablesGroup{group.Id}";
             //        listView.Background = System.Windows.Media.Brushes.White;
@@ -66,7 +69,7 @@ namespace MilkTeaManagementUI
             //        var tables = _tableService.GetTableByGroup(group.Id);
             //        _tablesByGroupId[group.Id] = tables; // Store tables in dictionary for later reference
 
-            //        // Set items source to the retrieved tables
+            //        //Set items source to the retrieved tables
             //        listView.ItemsSource = tables;
 
             //        // Define how each table item should be displayed
@@ -87,52 +90,53 @@ namespace MilkTeaManagementUI
             //    MessageBox.Show("Failed to retrieve table groups.");
             //}
         }
-
-
-
-        private void TabControlGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void ListViewTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count > 0)
-            {
-                TabItem selectedTab = e.AddedItems[0] as TabItem;
-                if (selectedTab != null && selectedTab.Tag != null)
-                {
-                    long groupId = (long)selectedTab.Tag;
-
-                    // Find ListView for the selected group
-                    ListView listView = selectedTab.Content as ListView;
-                    if (listView != null)
-                    {
-                        // Set items source to tables of the selected group
-                        if (_tablesByGroupId.ContainsKey(groupId))
-                        {
-                            listView.ItemsSource = _tablesByGroupId[groupId];
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Tables for group ID {groupId} not found.");
-                        }
-                    }
-                }
-            }
+            TableChoosedTextBlock.Content = "Table: " + (ListViewTable.SelectedItem as TbTable).NameTb;
         }
+
+        public void Product_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ProductChoosed productChoosed = new ProductChoosed();
+            productChoosed.Product = ListViewProduct.SelectedItem as TbProduct;
+            productChoosed.ShowDialog();
+
+            ListViewOrder.ItemsSource = Products;
+        }
+
+
+
+        //private void TabControlGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    var selectedGroup = TabControlGroups.SelectedItem as TableGroupService;
+        //    if (selectedGroup != null)
+        //    {
+        //        ListViewTable.ItemsSource = selectedGroup.GetTableGroupList();
+        //    }
+        //}
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();
+            Application.Current.Shutdown();
         }
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
             ButtonOpenMenu.Visibility = Visibility.Collapsed;
             ButtonCloseMenu.Visibility = Visibility.Visible;
+            var storyboard = (Storyboard)FindResource("OpenMenu");
+            storyboard.Begin();
         }
 
         private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
         {
             ButtonOpenMenu.Visibility = Visibility.Visible;
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
+            var storyboard = (Storyboard)FindResource("CloseMenu");
+            storyboard.Begin();
         }
+
     }
 }
