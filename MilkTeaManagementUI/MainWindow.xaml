@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="1080" Width="1920" Foreground="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+        mc:Ignorable="d" Height="540" Width="1080" Foreground="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -29,7 +29,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="#FFDEDEDE">
-        <Grid x:Name="GridMain" HorizontalAlignment="Left" VerticalAlignment="Center" Height="800" Width="1010" Margin="70,0,0,0"/>
+        <Grid x:Name="GridMain" HorizontalAlignment="Left" VerticalAlignment="Center" Height="520" Width="1010" Margin="70,0,0,0"/>
         <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
@@ -47,16 +47,16 @@
             </StackPanel>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Thu ngân trà sữa</TextBlock>
         </Grid>
-        <Grid x:Name="GridContent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="1005" Width="1825" Margin="0,0,0,10">
-            <Grid x:Name="GridProductOrder" Margin="10,10,10,10" RenderTransformOrigin="0.732,0.805" >
+        <Grid x:Name="GridContent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="465" Width="1005" Margin="0,0,0,10">
+            <Grid x:Name="GridProductOrder" Margin="10,10,10,0" RenderTransformOrigin="0.732,0.805" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="61*"/>
                     <ColumnDefinition Width="515*"/>
                     <ColumnDefinition Width="434*"/>
                 </Grid.ColumnDefinitions>
 
-                <Border Background="#EAEAEA" Margin="0,0,0,401" Padding="10" HorizontalAlignment="Center" Width="1026" Grid.ColumnSpan="2">
-                    <StackPanel HorizontalAlignment="Left" Width="994">
+                <Border Background="#EAEAEA" Margin="0,0,0,227" Padding="10" HorizontalAlignment="Center" Width="542" Grid.ColumnSpan="2">
+                    <StackPanel HorizontalAlignment="Center" Width="522">
                         <TextBlock Text="Product" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 10"/>
                         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                             <ListView x:Name="ListViewProduct" Background="White">
@@ -86,7 +86,15 @@
                         </ScrollViewer>
                     </StackPanel>
                 </Border>
-                <Border Background="#EAEAEA" Margin="2,589,2,0" Padding="10" Grid.ColumnSpan="2">
+                <Border Background="#EAEAEA" Margin="17,236,15,12" Padding="10" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180.529"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
                     <TabControl x:Name="TabControlGroups" SelectionChanged="TabControlGroups_SelectionChanged">
                         <!-- Placeholder tab for initialization -->
                         <TabItem Header="Loading..." IsEnabled="False">
@@ -96,15 +104,13 @@
                                     <ListView x:Name="ListViewTable" Background="White">
                                         <ListView.ItemsPanel>
                                             <ItemsPanelTemplate>
-                                                <UniformGrid Columns="5" />
+                                                <UniformGrid Columns="4" />
                                             </ItemsPanelTemplate>
                                         </ListView.ItemsPanel>
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <Border BorderBrush="#CCCCCC" BorderThickness="1" Margin="5">
                                                     <StackPanel>
-                                                        <TextBlock Text="{Binding NameTb}" Margin="5 3" HorizontalAlignment="Center"/>
-                                                        <TextBlock Text="{Binding TbGroupTb.Name}" Margin="5 3" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
                                             </DataTemplate>

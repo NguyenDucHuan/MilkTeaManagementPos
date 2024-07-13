@@ -16,7 +16,7 @@ namespace MilkTeaManagement.DAL.Repositories
         public List<TbTable> GetTableByGroup(long idGroup)
         {
             _context = new MilkTeaContext();
-            return _context.TbTables.Include(table => table.IdGroupNavigation).Where(table => table.IdGroup == idGroup).ToList();
+            return _context.TbTables.Include("IdGroupNavigation").Where(table => table.IdGroup == idGroup).ToList();
         }
     }
 }
