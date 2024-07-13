@@ -49,44 +49,43 @@ namespace MilkTeaManagementUI
             _tableService = new TableService();
             ListViewTable.ItemsSource = _tableService.GetTableList();
 
-            if (tableGroups != null)
-            {
-                TabControlGroups.Items.Clear();
+            //if (tableGroups != null)
+            //{
+            //    TabControlGroups.Items.Clear();
 
-                foreach (var group in tableGroups)
-                {
-                    TabItem tabItem = new TabItem();
-                    tabItem.Header = group.Name;
-                    tabItem.Tag = group.Id;
+            //    foreach (var group in tableGroups)
+            //    {
+            //        TabItem tabItem = new TabItem();
+            //        tabItem.Header = group.Name;
+            //        tabItem.Tag = group.Id;
 
-                    ListView listView = new ListView();
-                    listView.Name = $"ListViewTablesGroup{group.Id}";
-                    listView.Background = System.Windows.Media.Brushes.White;
+            //        ListView listView = new ListView();
+            //        listView.Name = $"ListViewTablesGroup{group.Id}";
+            //        listView.Background = System.Windows.Media.Brushes.White;
+            //        // Retrieve tables for the current group
+            //        var tables = _tableService.GetTableByGroup(group.Id);
+            //        _tablesByGroupId[group.Id] = tables; // Store tables in dictionary for later reference
 
-                    // Retrieve tables for the current group
-                    var tables = _tableService.GetTableByGroup(group.Id);
-                    _tablesByGroupId[group.Id] = tables; // Store tables in dictionary for later reference
+            //        // Set items source to the retrieved tables
+            //        listView.ItemsSource = tables;
 
-                    // Set items source to the retrieved tables
-                    listView.ItemsSource = tables;
+            //        // Define how each table item should be displayed
+            //        listView.ItemTemplate = (DataTemplate)Resources["TableItemTemplate"]; // Ensure "TableItemTemplate" is defined in your resources
+            //        listView.ItemContainerStyle = (Style)Resources["TableListViewItemStyle"]; // Ensure "TableListViewItemStyle" is defined in your resources
 
-                    // Define how each table item should be displayed
-                    listView.ItemTemplate = (DataTemplate)Resources["TableItemTemplate"]; // Ensure "TableItemTemplate" is defined in your resources
-                    listView.ItemContainerStyle = (Style)Resources["TableListViewItemStyle"]; // Ensure "TableListViewItemStyle" is defined in your resources
+            //        tabItem.Content = listView;
+            //        TabControlGroups.Items.Add(tabItem);
+            //    }
 
-                    tabItem.Content = listView;
-                    TabControlGroups.Items.Add(tabItem);
-                }
-
-                if (TabControlGroups.Items.Count > 0)
-                {
-                    TabControlGroups.SelectedIndex = 0; // Select the first tab by default
-                }
-            }
-            else
-            {
-                MessageBox.Show("Failed to retrieve table groups.");
-            }
+            //    if (TabControlGroups.Items.Count > 0)
+            //    {
+            //        TabControlGroups.SelectedIndex = 0; // Select the first tab by default
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Failed to retrieve table groups.");
+            //}
         }
 
 
