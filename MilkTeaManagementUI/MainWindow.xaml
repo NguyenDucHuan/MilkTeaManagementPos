@@ -133,10 +133,10 @@
                         <ListView x:Name="ListViewOrder" Background="#FFFFFF">
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Header="Name" Width="Auto" DisplayMemberBinding="{Binding Name}"/>
-                                    <GridViewColumn Header="Price" Width="Auto" DisplayMemberBinding="{Binding Price}"/>
+                                    <GridViewColumn Header="Name" Width="Auto" DisplayMemberBinding="{Binding IdProductNavigation.Name}"/>
+                                    <GridViewColumn Header="Price" Width="Auto" DisplayMemberBinding="{Binding UnitPrice}"/>
                                     <GridViewColumn Header="Quantity" Width="Auto" DisplayMemberBinding="{Binding Quantity}"/>
-                                    <GridViewColumn Header="Total" Width="Auto" DisplayMemberBinding="{Binding Total}"/>
+                                    <GridViewColumn Header="Total" Width="Auto" DisplayMemberBinding="{Binding IntoMoney}"/>
                                 </GridView>
                             </ListView.View>
                         </ListView>

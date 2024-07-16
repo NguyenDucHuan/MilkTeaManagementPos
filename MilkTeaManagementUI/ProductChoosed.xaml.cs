@@ -48,8 +48,20 @@ namespace MilkTeaManagementUI
         {
             Product.Unit = QuantityTextBox.Text;
             Product.Description = DescriptionTextBox.Text;
-            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow.Products.Add(Product);
+            TbBillDetailt billDetailt = new TbBillDetailt() { Description = Product.Description, IdProduct = Product.Id, Quantity = int.Parse(Product.Unit), UnitPrice = Product.UnitPrice, IntoMoney = Product.UnitPrice * int.Parse(Product.Unit), IdProductNavigation = Product };
+            if (Application.Current.Properties["CurBill"] == null)
+            {
+                TbBill curBill = new TbBill();
+                curBill.TbBillDetailts.Add(billDetailt);
+                Application.Current.Properties["CurBill"] = curBill;
+            }
+            else
+            {
+                TbBill curBill = (TbBill)Application.Current.Properties["CurBill"];
+                curBill.TbBillDetailts.Add(billDetailt);
+                Application.Current.Properties["CurBill"] = curBill;
+            }
+            this.Close();
         }
     }
 }

@@ -14,7 +14,9 @@ namespace MilkTeaManagementUI
         private TableGroupService _tableGroupService = new();
         private Dictionary<long, List<TbTable>> _tablesByGroupId;
         public List<TbProduct> Products { get; set; }
-        public String Description { get; set; }
+        public TbBill CurBill { get; set; } = null;
+
+
 
         public MainWindow()
         {
@@ -27,6 +29,7 @@ namespace MilkTeaManagementUI
             LoadMenu();
             LoadLoginUser();
             LoadTableGroups();
+            LoadCurOrder();
         }
 
         public void LoadMenu()
@@ -43,6 +46,14 @@ namespace MilkTeaManagementUI
             long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
             var loginEmp = _employeeService.GetLoginEmployee(loggedInEmpID);
             LoginEmpNameTextBox.Text = loginEmp.FullName;
+        }
+        public void LoadCurOrder()
+        {
+            if (CurBill != null)
+            {
+                ListViewOrder.ItemsSource = CurBill.TbBillDetailts;
+
+            }
         }
 
         public void LoadTableGroups()
@@ -100,8 +111,9 @@ namespace MilkTeaManagementUI
             ProductChoosed productChoosed = new ProductChoosed();
             productChoosed.Product = ListViewProduct.SelectedItem as TbProduct;
             productChoosed.ShowDialog();
+            CurBill = (TbBill)Application.Current.Properties["CurBill"];
+            LoadCurOrder();
 
-            ListViewOrder.ItemsSource = Products;
         }
 
 
