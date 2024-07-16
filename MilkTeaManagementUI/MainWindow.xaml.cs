@@ -34,6 +34,7 @@ namespace MilkTeaManagementUI
 
         public void LoadMenu()
         {
+            ListViewProduct.ItemsSource = null;
             _productService = new ProductService();
             var products = _productService.GetAllProductList();
             DataContext = this;
@@ -49,6 +50,7 @@ namespace MilkTeaManagementUI
         }
         public void LoadCurOrder()
         {
+            ListViewOrder.ItemsSource = null;
             if (CurBill != null)
             {
                 ListViewOrder.ItemsSource = CurBill.TbBillDetailts;
@@ -112,7 +114,10 @@ namespace MilkTeaManagementUI
             productChoosed.Product = ListViewProduct.SelectedItem as TbProduct;
             productChoosed.ShowDialog();
             CurBill = (TbBill)Application.Current.Properties["CurBill"];
+
+
             LoadCurOrder();
+
 
         }
 

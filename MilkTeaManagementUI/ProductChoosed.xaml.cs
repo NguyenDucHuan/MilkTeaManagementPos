@@ -58,6 +58,18 @@ namespace MilkTeaManagementUI
             else
             {
                 TbBill curBill = (TbBill)Application.Current.Properties["CurBill"];
+
+                foreach (var item in curBill.TbBillDetailts)
+                {
+                    if (item.IdProduct == Product.Id)
+                    {
+                        item.Quantity += int.Parse(Product.Unit);
+                        item.IntoMoney = item.Quantity * item.UnitPrice;
+                        this.Close();
+                        return;
+                    }
+                }
+
                 curBill.TbBillDetailts.Add(billDetailt);
                 Application.Current.Properties["CurBill"] = curBill;
             }
