@@ -13,6 +13,8 @@ namespace MilkTeaManagementUI
         private TableService _tableService = new();
         private TableGroupService _tableGroupService = new();
         private Dictionary<long, List<TbTable>> _tablesByGroupId;
+        private BillService _billService = new();
+        private BillDetailService _billDetailService = new();
         public List<TbProduct> Products { get; set; }
         public TbBill CurBill { get; set; } = null;
 
@@ -105,6 +107,12 @@ namespace MilkTeaManagementUI
         }
         public void ListViewTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (CurBill == null)
+                CurBill = new();
+            long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
+            CurBill.IdTable = (ListViewTable.SelectedItem as TbTable).Id;
+            CurBill.IdUser = loggedInEmpID;
+            Application.Current.Properties["CurBill"] = CurBill;
             TableChoosedTextBlock.Content = "Table: " + (ListViewTable.SelectedItem as TbTable).NameTb;
         }
 
@@ -114,8 +122,8 @@ namespace MilkTeaManagementUI
             productChoosed.Product = ListViewProduct.SelectedItem as TbProduct;
             productChoosed.ShowDialog();
             CurBill = (TbBill)Application.Current.Properties["CurBill"];
-
-
+            UpdateTotalMoney();
+            TotalMoneyTextBlock.Text = "Total money: " + CurBill.TotalMoney.ToString() + " VND";
             LoadCurOrder();
 
 
@@ -155,5 +163,50 @@ namespace MilkTeaManagementUI
             storyboard.Begin();
         }
 
+        private void Checkout_Click(object sender, RoutedEventArgs e)
+        {
+            if (CurBill.IdTable == null)
+            {
+                MessageBoxResult answer = MessageBox.Show("Please choose table!!", "No choose table!!", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else if (CurBill != null && (CurBill.TbBillDetailts.Count == 0 || CurBill.TbBillDetailts == null))
+            {
+                MessageBoxResult answer = MessageBox.Show("No have order menu now!! Please choose drink!!", "Error ", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else if (CurBill != null && (CurBill.TbBillDetailts.Count > 0 || CurBill.TbBillDetailts != null))
+            {
+                CurBill.BillDate = DateTime.Now;
+                _billService.CreateNewBill(CurBill);
+                _billDetailService.CreateNewBillDetails((List<TbBillDetailt>)CurBill.TbBillDetailts);
+                MessageBoxResult answer = MessageBox.Show("Check out complete", "Complete!!", MessageBoxButton.OK, MessageBoxImage.Information);
+                CurBill = null;
+                LoadCurOrder();
+                TableChoosedTextBlock.Content = "";
+                TotalMoneyTextBlock.Text = "";
+            }
+        }
+        private void UpdateTotalMoney()
+        {
+            double totalMoney = 0;
+            if (CurBill != null)
+            {
+                if (CurBill.TbBillDetailts.Count != 0)
+                {
+                    foreach (var billDetail in CurBill.TbBillDetailts)
+                    {
+                        totalMoney = totalMoney + (double)billDetail.IntoMoney;
+                    }
+                    CurBill.TotalMoney = totalMoney;
+                }
+            }
+        }
+
+        private void ClearOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            CurBill = null;
+            LoadCurOrder();
+            TableChoosedTextBlock.Content = "";
+            TotalMoneyTextBlock.Text = "";
+        }
     }
 }
