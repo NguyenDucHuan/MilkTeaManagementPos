@@ -1,46 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\",
+  "WorkspaceRootPath": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagementui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagementui\\addproductgroup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\addproductgroup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagementui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagementui\\addproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\addproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagementui\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagementui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagementui\\productchoosed.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\productchoosed.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagementui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagement.dal\\repositories\\billdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|solutionrelative:milkteamanagement.dal\\repositories\\billdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagement.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagement.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|solutionrelative:milkteamanagement.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagementui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagement.dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|solutionrelative:milkteamanagement.dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagement.dal\\entities\\tbproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|solutionrelative:milkteamanagement.dal\\entities\\tbproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagementui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagementui\\productchoosed.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\productchoosed.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagement.bll\\services\\billservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagement.bll\\services\\billservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|solutionrelative:milkteamanagement.bll\\services\\billservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagement.bll\\services\\billdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|d:\\prn212_assignmentproject\\prn212_assignmentproject\\milkteamanagement.bll\\services\\billdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF5B775-9380-4362-AE8F-2EDAE9427087}|MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj|solutionrelative:milkteamanagement.bll\\services\\billdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|d:\\term5\\prn212\\prn212_assignmentproject\\milkteamanagement.dal\\entities\\tbbilldetailt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|solutionrelative:milkteamanagement.dal\\entities\\tbbilldetailt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,27 +54,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddProductGroup.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AddProductGroup.xaml.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagementUI\\AddProductGroup.xaml.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AddProductGroup.xaml.cs",
+              "RelativeToolTip": "MilkTeaManagementUI\\AddProductGroup.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T14:54:55.048Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.BLL\\Services\\ProductService.cs",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\ProductService.cs",
-              "RelativeToolTip": "MilkTeaManagement.BLL\\Services\\ProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagementUI\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MilkTeaManagementUI\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAM8AAAAAKn/0J135v9gAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T02:08:25.278Z"
+              "WhenOpened": "2024-07-17T14:52:09.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MilkTeaManagementUI\\MainWindow.xaml",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml",
+              "RelativeToolTip": "MilkTeaManagementUI\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-17T14:51:10.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "MilkTeaManagement.DAL\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T14:49:24.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TbProduct.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbProduct.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\TbProduct.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbProduct.cs",
+              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\TbProduct.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T14:43:41.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddProduct.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AddProduct.xaml.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagementUI\\AddProduct.xaml.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AddProduct.xaml.cs",
+              "RelativeToolTip": "MilkTeaManagementUI\\AddProduct.xaml.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwCkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T14:26:38.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddProduct.xaml",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AddProduct.xaml",
+              "RelativeDocumentMoniker": "MilkTeaManagementUI\\AddProduct.xaml",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AddProduct.xaml",
+              "RelativeToolTip": "MilkTeaManagementUI\\AddProduct.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-17T14:44:34.803Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagement.BLL\\Services\\ProductService.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\ProductService.cs",
+              "RelativeToolTip": "MilkTeaManagement.BLL\\Services\\ProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T02:08:25.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\appsettings.json",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\appsettings.json",
               "RelativeDocumentMoniker": "MilkTeaManagementUI\\appsettings.json",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\appsettings.json",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagementUI\\appsettings.json",
               "RelativeToolTip": "MilkTeaManagementUI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -78,11 +176,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "BillService.cs",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillService.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillService.cs",
               "RelativeDocumentMoniker": "MilkTeaManagement.BLL\\Services\\BillService.cs",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillService.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillService.cs",
               "RelativeToolTip": "MilkTeaManagement.BLL\\Services\\BillService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -90,86 +188,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "BillDetailService.cs",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillDetailService.cs",
+              "DocumentMoniker": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillDetailService.cs",
               "RelativeDocumentMoniker": "MilkTeaManagement.BLL\\Services\\BillDetailService.cs",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillDetailService.cs",
+              "ToolTip": "D:\\PRN212_AssignmentProject\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\Services\\BillDetailService.cs",
               "RelativeToolTip": "MilkTeaManagement.BLL\\Services\\BillDetailService.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-17T01:20:28.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BillDetailRepository.cs",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Repositories\\BillDetailRepository.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Repositories\\BillDetailRepository.cs",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Repositories\\BillDetailRepository.cs",
-              "RelativeToolTip": "MilkTeaManagement.DAL\\Repositories\\BillDetailRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T00:35:08.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductChoosed.xaml.cs",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\ProductChoosed.xaml.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagementUI\\ProductChoosed.xaml.cs",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\ProductChoosed.xaml.cs",
-              "RelativeToolTip": "MilkTeaManagementUI\\ProductChoosed.xaml.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAwwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T09:45:58.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductChoosed.xaml",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\ProductChoosed.xaml",
-              "RelativeDocumentMoniker": "MilkTeaManagementUI\\ProductChoosed.xaml",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\ProductChoosed.xaml",
-              "RelativeToolTip": "MilkTeaManagementUI\\ProductChoosed.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-16T06:12:52.887Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagementUI\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MilkTeaManagementUI\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T06:12:25.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MilkTeaManagementUI\\MainWindow.xaml",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MainWindow.xaml",
-              "RelativeToolTip": "MilkTeaManagementUI\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-16T06:12:08.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TbBillDetailt.cs",
-              "DocumentMoniker": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbBillDetailt.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\TbBillDetailt.cs",
-              "ToolTip": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbBillDetailt.cs",
-              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\TbBillDetailt.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T06:15:31.639Z"
             }
           ]
         }

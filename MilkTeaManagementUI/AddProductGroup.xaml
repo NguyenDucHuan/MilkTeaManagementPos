@@ -1,0 +1,18 @@
+﻿<Window x:Class="MilkTeaManagementUI.AddProductGroup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MilkTeaManagementUI"
+        mc:Ignorable="d"
+        Title="AddProductGroup" Height="450" Width="800">
+    <Grid>
+        <Label Content="Tên nhóm hàng" HorizontalAlignment="Left" Margin="99,110,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Mô tả" HorizontalAlignment="Left" Margin="172,191,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="ProductGroupNameTextBox" HorizontalAlignment="Left" Margin="293,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
+        <TextBox x:Name="DescriptionProductGroupTextBox" HorizontalAlignment="Left" Margin="293,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
+        <Button x:Name="AddProductGroupButton" Content="Add Product" HorizontalAlignment="Left" Margin="268,373,0,0" VerticalAlignment="Top" Click="AddProductGroupButton_Click" />
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="454,373,0,0" VerticalAlignment="Top" Width="107" RenderTransformOrigin="0.5,0.5" Click="CancelButton_Click" />
+
+    </Grid>
+</Window>

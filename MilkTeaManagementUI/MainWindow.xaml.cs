@@ -208,5 +208,13 @@ namespace MilkTeaManagementUI
             TableChoosedTextBlock.Content = "";
             TotalMoneyTextBlock.Text = "";
         }
+
+        private void AddProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct addProduct = new AddProduct();
+            addProduct.ShowDialog();
+
+            LoadMenu();
+        }
     }
 }
