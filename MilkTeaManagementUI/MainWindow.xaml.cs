@@ -121,9 +121,17 @@ namespace MilkTeaManagementUI
             ProductChoosed productChoosed = new ProductChoosed();
             productChoosed.Product = ListViewProduct.SelectedItem as TbProduct;
             productChoosed.ShowDialog();
-            CurBill = (TbBill)Application.Current.Properties["CurBill"];
-            UpdateTotalMoney();
-            TotalMoneyTextBlock.Text = "Total money: " + CurBill.TotalMoney.ToString() + " VND";
+
+            if (CurBill != null)
+            {
+                CurBill = (TbBill)Application.Current.Properties["CurBill"];
+                UpdateTotalMoney();
+                if (CurBill.TotalMoney > 0)
+                {
+                    TotalMoneyTextBlock.Text = "Total money: " + CurBill.TotalMoney.ToString() + " VND";
+                }
+            }
+
             LoadCurOrder();
 
 
