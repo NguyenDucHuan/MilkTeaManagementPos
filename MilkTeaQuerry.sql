@@ -27,8 +27,8 @@ CREATE TABLE [dbo].[Login](
 	FOREIGN KEY (idEmployee) REFERENCES Employees(id)
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-INSERT [dbo].[Login] ( [idEmployee], [userName], [password], [isUse]) VALUES (1, N'Manager', N'HuanZD05', 1);
-INSERT [dbo].[Login] ([idEmployee], [userName], [password], [isUse]) VALUES (2, N'Employee', N'HuanZD05', 1);
+INSERT [dbo].[Login] ( [idEmployee], [userName], [password], [isUse]) VALUES (1, N'Manager', N'6b86b273ff34fce19d6b804eff5a3f57', 1);
+INSERT [dbo].[Login] ([idEmployee], [userName], [password], [isUse]) VALUES (2, N'Employee', N'6b86b273ff34fce19d6b804eff5a3f57', 1);
 GO
 -- MenuItems table
 CREATE TABLE [dbo].[MenuItems](
@@ -175,7 +175,3 @@ CREATE TABLE [dbo].[tbStore](
 	[taxCode] [nvarchar](250) NULL,
 ) ON [PRIMARY]
 GO
-
-
-
-

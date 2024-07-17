@@ -3139,11 +3139,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
+      "projectUniqueName": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
       "projectName": "MilkTeaManagement.BLL",
-      "projectPath": "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
+      "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
       "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
-      "outputPath": "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.BLL\\obj\\",
+      "outputPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3165,8 +3165,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
-              "projectPath": "D:\\TERM5\\PRN212\\SecondASS\\Assignment\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj"
+            "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
+              "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj"
             }
           }
         }
