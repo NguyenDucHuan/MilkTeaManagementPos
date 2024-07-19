@@ -88,7 +88,7 @@
                 </Border>
 
 
-                <Border Background="#EAEAEA" Margin="17,306,15,-25" Padding="10" Grid.ColumnSpan="2" Height="300px">
+                <Border Background="#EAEAEA" Margin="17,306,15,5" Padding="10" Grid.ColumnSpan="2">
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleX="-1" ScaleY="-1"/>
@@ -143,11 +143,12 @@
                         </ListView>
                     </StackPanel>
                 </Border>
-                <Border Grid.Column="2" Margin="11,326,11,1" Background="#EAEAEA" RenderTransformOrigin="0.5,0.5">
+                <Border Grid.Column="2" Margin="11,326,11,95" Background="#EAEAEA" RenderTransformOrigin="0.5,0.5">
                     <StackPanel  Margin="4,7,0,10">
                         <TextBlock x:Name="TotalMoneyTextBlock" TextWrapping="Wrap" Text="" Foreground="Black"/>
-                        <Button x:Name="ClearOrderButton" Content="ClearOrder" Width="130" Margin="260,30,15,1" Height="27" Click="ClearOrderButton_Click"/>
-                        <Button Content="Checkout" Click="Checkout_Click" Margin="260,2,15,1" Width="130" Height="26"/>
+                        <Button x:Name="ClearOrderButton" Content="ClearOrder" Width="130" Margin="260,30,15,1" Height="27" Click="ClearOrderButton_Click" Visibility="Visible"/>
+                        <Button Content="Checkout" Click="Checkout_Click" Margin="260,2,15,1" Width="130" Height="26" Visibility="Visible"/>
+                        <Button x:Name="ClearTableButton" Content="Clear Table" Width="130"  Margin="260,2,15,1" Height="27" Click="ClearTable_Click" Visibility="Hidden"/>
                     </StackPanel>
                 </Border>
             </Grid>
@@ -184,9 +185,9 @@
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="60">
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
                             <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10" />
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
@@ -204,6 +205,5 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <Button x:Name="AddProductButton" Content="+" HorizontalAlignment="Left" Margin="551,85,0,0" VerticalAlignment="Top" Click="AddProductButton_Click"/>
     </Grid>
 </Window>
