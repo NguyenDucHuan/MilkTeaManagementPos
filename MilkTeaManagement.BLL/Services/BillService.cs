@@ -17,6 +17,10 @@ namespace MilkTeaManagement.BLL.Services
             _repo = new();
             _repo.AddNew(tbBill);
         }
-
+        public TbBill GetLastestBillFromTableID(long tableID)
+        {
+            var bills = _repo.GetAll();
+            return bills.Where(t => t.IdTable == tableID).ToList().OrderByDescending(p => p.BillDate).FirstOrDefault();
+        }
     }
 }

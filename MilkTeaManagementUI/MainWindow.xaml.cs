@@ -18,7 +18,7 @@ namespace MilkTeaManagementUI
         public List<TbTable> TablesOnUse { get; set; } = null;
         public TbBill CurBill { get; set; } = null;
 
-
+        public TbBill OldBill { get; set; } = null;
 
         public MainWindow()
         {
@@ -62,8 +62,17 @@ namespace MilkTeaManagementUI
 
         public void LoadTable()
         {
-            var tableGroups = _tableGroupService.GetTableGroupList();
-            ListViewTable.ItemsSource = _tableService.GetTableList();
+            if (TablesOnUse != null)
+            {
+                var tables = _tableService.GetTableList();
+                ListViewTable.ItemsSource = tables.Where(t => !TablesOnUse.Any(p2 => p2.Id == t.Id));
+                ListViewTableOnUse.ItemsSource = TablesOnUse;
+            }
+            else
+            {
+                ListViewTable.ItemsSource = _tableService.GetTableList();
+            }
+
         }
         public void ListViewTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -92,7 +101,7 @@ namespace MilkTeaManagementUI
                     UpdateTotalMoney();
                     if (CurBill.TotalMoney > 0)
                     {
-                        TotalMoneyTextBlock.Text = "Total money: " + CurBill.TotalMoney.ToString() + " VND";
+                        TotalMoneyTextBlock.Text = "Total money:\n " + CurBill.TotalMoney.ToString() + " VND";
                     }
                 }
             }
@@ -124,7 +133,7 @@ namespace MilkTeaManagementUI
             storyboard.Begin();
         }
 
-        private void Checkout_Click(object sender, RoutedEventArgs e)
+        private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
             if (CurBill.IdTable == null)
             {
@@ -153,6 +162,7 @@ namespace MilkTeaManagementUI
                 CurBill = null;
                 LoadCurOrder();
                 ListViewTable.SelectedItem = null;
+                LoadTable();
                 TableChoosedTextBlock.Content = "";
                 TotalMoneyTextBlock.Text = "";
             }
@@ -186,10 +196,35 @@ namespace MilkTeaManagementUI
             addProduct.ShowDialog();
             LoadMenu();
         }
-
-        private void ClearTable_Click(object sender, RoutedEventArgs e)
+        private void RefreshTableButton_Click(object sender, RoutedEventArgs e)
         {
+            if (OldBill != null)
+            {
 
+            }
+
+            ListViewTableOnUse.SelectedItem = null;
+            CheckoutOrderButton.Visibility = Visibility.Visible;
+            ClearOrderButton.Visibility = Visibility.Visible;
+            RefreshTableButton.Visibility = Visibility.Hidden;
+        }
+
+        private void ListViewTableOnUse_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var tableID = (long)(ListViewTableOnUse.SelectedItem as TbTable).Id;
+            var lastestBill = _billService.GetLastestBillFromTableID(tableID);
+            ListViewOrder.ItemsSource = null;
+            if (lastestBill != null)
+            {
+                ListViewOrder.ItemsSource = lastestBill.TbBillDetailts;
+                TableChoosedTextBlock.Content = "Ordering On Table: " + (ListViewTableOnUse.SelectedItem as TbTable).NameTb;
+                TotalMoneyTextBlock.Text = "Total money:\n " + lastestBill.TotalMoney.ToString() + " VND";
+            }
+            OldBill = new TbBill();
+            OldBill = lastestBill;
+            CheckoutOrderButton.Visibility = Visibility.Hidden;
+            ClearOrderButton.Visibility = Visibility.Hidden;
+            RefreshTableButton.Visibility = Visibility.Visible;
         }
     }
 }

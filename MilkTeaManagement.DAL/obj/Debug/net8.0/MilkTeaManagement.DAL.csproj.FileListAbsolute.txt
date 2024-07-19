@@ -13,3 +13,17 @@ D:\PRN212_AssignmentProject\PRN212_AssignmentProject\MilkTeaManagement.DAL\obj\D
 D:\PRN212_AssignmentProject\PRN212_AssignmentProject\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.pdb
 D:\PRN212_AssignmentProject\PRN212_AssignmentProject\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.genruntimeconfig.cache
 D:\PRN212_AssignmentProject\PRN212_AssignmentProject\MilkTeaManagement.DAL\obj\Debug\net8.0\ref\MilkTeaManagement.DAL.dll
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\bin\Debug\net8.0\MilkTeaManagement.DAL.deps.json
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\bin\Debug\net8.0\MilkTeaManagement.DAL.runtimeconfig.json
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\bin\Debug\net8.0\MilkTeaManagement.DAL.dll
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\bin\Debug\net8.0\MilkTeaManagement.DAL.pdb
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.csproj.AssemblyReference.cache
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.GeneratedMSBuildEditorConfig.editorconfig
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.AssemblyInfoInputs.cache
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.AssemblyInfo.cs
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.csproj.CoreCompileInputs.cache
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.dll
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\refint\MilkTeaManagement.DAL.dll
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.pdb
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\MilkTeaManagement.DAL.genruntimeconfig.cache
+H:\SEM5\PRN212\PRN212_AssignmentProject-main\MilkTeaManagement.DAL\obj\Debug\net8.0\ref\MilkTeaManagement.DAL.dll
