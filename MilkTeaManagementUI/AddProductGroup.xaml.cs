@@ -21,7 +21,6 @@ namespace MilkTeaManagementUI
             {
                 MessageBox.Show("Please fill in all fields");
                 return;
-
             }
             TbGroupProduct tbGroupProduct = new TbGroupProduct();
 

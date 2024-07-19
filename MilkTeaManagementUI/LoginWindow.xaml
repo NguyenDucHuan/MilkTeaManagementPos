@@ -11,6 +11,7 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="14">
 
+
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -20,6 +21,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <Rectangle HorizontalAlignment="Left" Height="451" Margin="-28,-28,0,0" Stroke="White" Fill="#f8f5ec" VerticalAlignment="Top" Width="159" Grid.RowSpan="6"/>
+        <Rectangle HorizontalAlignment="Left" Height="451" Margin="131,-28,0,0" Stroke="White" Fill="#fffcf8" VerticalAlignment="Top" Width="161" Grid.RowSpan="6"/>
+        <Rectangle HorizontalAlignment="Left" Height="451" Margin="282,-28,0,0" Stroke="White" Fill="#f8f5ec" VerticalAlignment="Top" Width="187" Grid.RowSpan="6"/>
+        <Rectangle HorizontalAlignment="Left" Height="451" Margin="454,-28,0,0" Stroke="White" Fill="#fffcf8" VerticalAlignment="Top" Width="169" Grid.RowSpan="6"/>
+        <Rectangle HorizontalAlignment="Left" Height="451" Margin="606,-28,0,0" Stroke="White" Fill="#f8f5ec" VerticalAlignment="Top" Width="174" Grid.RowSpan="6"/>
+
 
         <TextBlock Text="Milk Tea Management System" Grid.Row="0" Margin="0,0,0,20"
                    HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -41,13 +49,16 @@
 
         <Button x:Name="LoginButton" Content="Login" Grid.Row="3" Margin="287,20,0,0"
                 Style="{StaticResource MaterialDesignRaisedButton}"
-                Command="{Binding LoginCommand}" HorizontalAlignment="Left" Width="72" Click="LoginButton_Click"/>
+                Command="{Binding LoginCommand}" HorizontalAlignment="Left" Width="72" Background="#f8c26b" Foreground="Black" FontWeight="DemiBold" Click="LoginButton_Click"/>
 
         <Button x:Name="QuitButton" Content="Quit" Grid.Row="3" Margin="380,20,0,0"
                 Style="{StaticResource MaterialDesignRaisedButton}"
-                Command="{Binding QuitCommand}" HorizontalAlignment="Left" Width="74" Click="QuitButton_Click"/>
+                Command="{Binding QuitCommand}" HorizontalAlignment="Left" Width="74" Background="#f8c26b" Foreground="Black" FontWeight="DemiBold" Click="QuitButton_Click"/>
 
         <TextBlock Text="Version 1.0" Grid.Row="5" HorizontalAlignment="Center"
                    VerticalAlignment="Bottom" FontSize="12" Foreground="Gray"/>
+
+
+
     </Grid>
 </Window>

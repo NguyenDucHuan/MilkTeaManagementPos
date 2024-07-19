@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MilkTeaManagementUI"
         mc:Ignorable="d"
-        Title="AddProductGroup" Height="450" Width="800">
+        Title="AddProductGroup" Height="450" Width="800" Background="#fffcf8">
     <Grid>
-        <Label Content="Tên nhóm hàng" HorizontalAlignment="Left" Margin="99,110,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Mô tả" HorizontalAlignment="Left" Margin="172,191,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="ProductGroupNameTextBox" HorizontalAlignment="Left" Margin="293,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
-        <TextBox x:Name="DescriptionProductGroupTextBox" HorizontalAlignment="Left" Margin="293,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
-        <Button x:Name="AddProductGroupButton" Content="Add Product" HorizontalAlignment="Left" Margin="268,373,0,0" VerticalAlignment="Top" Click="AddProductGroupButton_Click" />
-        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="454,373,0,0" VerticalAlignment="Top" Width="107" RenderTransformOrigin="0.5,0.5" Click="CancelButton_Click" />
+        <Rectangle HorizontalAlignment="Center" Height="278" Stroke="Black" Fill="#c7b49e" VerticalAlignment="Center" Width="556" RadiusY="20" RadiusX="20"/>
+        <Label Content="ProductGroupName" HorizontalAlignment="Left" Margin="144,173,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="DemiBold"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="144,208,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="DemiBold"/>
+        <TextBox x:Name="ProductGroupNameTextBox" HorizontalAlignment="Left" Margin="346,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
+        <TextBox x:Name="DescriptionProductGroupTextBox" HorizontalAlignment="Left" Margin="346,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
+        <Button x:Name="AddProductGroupButton" Content="Add Product" HorizontalAlignment="Left" Margin="400,279,0,0" VerticalAlignment="Top" Background="#f8c26b" Foreground="Black" Click="AddProductGroupButton_Click" />
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="541,279,0,0" VerticalAlignment="Top" Width="97" Background="#f8c26b" Foreground="Black" RenderTransformOrigin="0.5,0.5" Click="CancelButton_Click" />
+        <Label Content="ADD PRODUCT" HorizontalAlignment="Left" Margin="286,93,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="ExtraBold"/>
+
 
     </Grid>
 </Window>
