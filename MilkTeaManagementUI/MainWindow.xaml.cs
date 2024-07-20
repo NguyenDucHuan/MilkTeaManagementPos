@@ -1,4 +1,5 @@
-﻿using MilkTeaManagement.BLL.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using MilkTeaManagement.BLL.Services;
 using MilkTeaManagement.DAL.Entities;
 using System.Linq;
 using System.Windows;
@@ -16,10 +17,12 @@ namespace MilkTeaManagementUI
         private Dictionary<long, List<TbTable>> _tablesByGroupId;
         private BillService _billService = new();
         private BillDetailService _billDetailService = new();
+        private LoginServices _loginServices = new();
         public List<TbTable> TablesOnUse { get; set; } = null;
         public TbBill CurBill { get; set; } = null;
 
         public TbBill OldBill { get; set; } = null;
+
 
         public MainWindow()
         {
@@ -47,7 +50,12 @@ namespace MilkTeaManagementUI
         {
             _employeeService = new EmployeeService();
             long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
+            var loginrole = _loginServices.GetLoginByEmpID(loggedInEmpID).LoginRoles.FirstOrDefault().IdLogin;
             var loginEmp = _employeeService.GetLoginEmployee(loggedInEmpID);
+            if (loginrole != 1)
+            {
+                GridMenu.Visibility = Visibility.Hidden;
+            }
             LoginEmpNameTextBox.Text = loginEmp.FullName;
         }
         public void LoadCurOrder()
@@ -85,7 +93,6 @@ namespace MilkTeaManagementUI
             }
 
         }
-
         public void Product_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListViewOrder.ItemsSource = null;
@@ -176,7 +183,7 @@ namespace MilkTeaManagementUI
         }
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
-            if (CurBill.IdTable == null)
+            if (CurBill == null)
             {
                 MessageBoxResult answer = MessageBox.Show("Please choose table!!", "No choose table!!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
@@ -258,6 +265,16 @@ namespace MilkTeaManagementUI
             ClearOrderButton.Visibility = Visibility.Visible;
             RefreshTableButton.Visibility = Visibility.Hidden;
             CancleButton.Visibility = Visibility.Hidden;
+        }
+
+        private void BillsStackPanel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Accounts_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
         }
     }
 }

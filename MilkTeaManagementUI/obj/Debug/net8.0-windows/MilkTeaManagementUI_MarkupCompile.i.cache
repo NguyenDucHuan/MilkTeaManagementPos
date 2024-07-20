@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\TERM5\PRN212\PRN212_AssignmentProject\MilkTeaManagementUI\App.xaml
-5863854943
+7963308176
 
-102023113622
+121354166650
 249899837472
-AddProduct.xaml;AddProductGroup.xaml;LoginWindow.xaml;MainWindow.xaml;ProductChoosed.xaml;
+AddProduct.xaml;AddProductGroup.xaml;BillDetail.xaml;BillReport.xaml;LoginWindow.xaml;MainWindow.xaml;ProductChoosed.xaml;
 
 True
 

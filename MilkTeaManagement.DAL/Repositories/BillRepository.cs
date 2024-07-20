@@ -21,7 +21,6 @@ namespace MilkTeaManagement.DAL.Repositories
                 Description = x.Description,
                 BillDate = x.BillDate,
                 IdUser = x.IdUser,
-                IdCustomer = x.IdCustomer,
                 Status = x.Status,
                 IdTable = x.IdTable
             };

@@ -1,6 +1,9 @@
-﻿using MilkTeaManagement.BLL.Services;
+﻿using Microsoft.Win32;
+using MilkTeaManagement.BLL.Services;
 using MilkTeaManagement.DAL.Entities;
+using System.IO;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace MilkTeaManagementUI
 {
@@ -9,6 +12,7 @@ namespace MilkTeaManagementUI
     /// </summary>
     public partial class AddProduct : Window
     {
+        private byte[] _imageData;
         private ProductGroupService _productGroupService = new ProductGroupService();
         private ProductService _productService = new ProductService();
         public AddProduct()
@@ -37,6 +41,7 @@ namespace MilkTeaManagementUI
             tbProduct.UnitPrice = int.Parse(PriceTextBox.Text);
             tbProduct.Description = DescriptionTextBox.Text;
             tbProduct.IdGroupProduct = (long)ProductGroupComboBox.SelectedValue;
+            tbProduct.Img = _imageData;
 
             _productService.AddProduct(tbProduct);
             this.Close();
@@ -59,6 +64,31 @@ namespace MilkTeaManagementUI
             ProductGroupComboBox.DisplayMemberPath = "NameGr";
             ProductGroupComboBox.SelectedValuePath = "IdGr";
             ProductGroupComboBox.SelectedIndex = 0;
+        }
+
+        private void UpdateImageButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _imageData = File.ReadAllBytes(openFileDialog.FileName);
+                DisplayImage(openFileDialog.FileName);
+                MessageBox.Show("Image uploaded successfully!");
+            }
+        }
+        private void DisplayImage(string imagePath)
+        {
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(imagePath);
+            bitmap.CacheOption = BitmapCacheOption.OnLoad;
+            bitmap.EndInit();
+
+            ProductImage.Source = bitmap;
         }
     }
 }

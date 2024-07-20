@@ -202,7 +202,7 @@
             </Grid>
 
         </Grid>
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#c7b49e">
+        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#c7b49e" Visibility="Visible">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>
@@ -226,28 +226,28 @@
                 </Grid>
 
                 <ListView x:Name="ListViewMenu" Foreground="black" >
-                    <ListViewItem x:Name="ItemHome" Height="60">
-                        <StackPanel Orientation="Horizontal">
+                    <ListViewItem x:Name="ItemBill" Height="60">
+                        <StackPanel x:Name="BillsStackPanel" Orientation="Horizontal" MouseLeftButtonDown="BillsStackPanel_MouseLeftButtonDown">
                             <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Bills" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="60">
-                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
+                        <StackPanel x:Name="ItemCreateStackpanel" Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
                             <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10"/>
                             <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Ticket" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Tickets" VerticalAlignment="Center"  Margin="20 10"/>
+                        <StackPanel x:Name="Accounts" Orientation="Horizontal" MouseLeftButtonDown="Accounts_MouseLeftButtonDown">
+                            <materialDesign:PackIcon Kind="AccountFile" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Accounts" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Messages" VerticalAlignment="Center"  Margin="20 10"/>
+                            <materialDesign:PackIcon Kind="Folder" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Reports" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

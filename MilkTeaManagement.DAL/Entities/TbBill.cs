@@ -19,10 +19,6 @@ public partial class TbBill
 
     public long? IdUser { get; set; }
 
-    public long? IdCustomer { get; set; }
-
-    public virtual TbCustomer? IdCustomerNavigation { get; set; }
-
     public virtual TbTable? IdTableNavigation { get; set; }
 
     public virtual Login? IdUserNavigation { get; set; }

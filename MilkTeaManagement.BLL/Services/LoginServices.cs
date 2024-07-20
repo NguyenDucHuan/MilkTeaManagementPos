@@ -1,4 +1,5 @@
-﻿using MilkTeaManagement.DAL.Repositories;
+﻿using MilkTeaManagement.DAL.Entities;
+using MilkTeaManagement.DAL.Repositories;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -18,7 +19,10 @@ namespace MilkTeaManagement.BLL.Services
             var loginUser = _repository.GetLogin(userName, HashString(password));
             return loginUser != null;
         }
-
+        public Login GetLogin(string userName, string password)
+        {
+            return _repository.GetLogin(userName, HashString(password));
+        }
         public long GetEmployeeID(string userName, string password)
         {
             var loginUser = _repository.GetLogin(userName, HashString(password));
@@ -37,6 +41,11 @@ namespace MilkTeaManagement.BLL.Services
                 }
                 return builder.ToString().Substring(0, 32);
             }
+        }
+
+        public Login GetLoginByEmpID(long loggedInEmpID)
+        {
+            return _repository.GetLoginByEmpID(loggedInEmpID);
         }
     }
 
