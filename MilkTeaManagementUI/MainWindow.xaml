@@ -195,6 +195,7 @@
                             <Button x:Name="ClearOrderButton" Content="ClearOrder" Width="130" Margin="10,0,15,1" Height="27" Background="#f8c26b" Foreground="Black" Click="ClearOrderButton_Click" Visibility="Visible"/>
                             <Button x:Name="CheckoutOrderButton" Content="Checkout" Click="CheckoutButton_Click" Margin="10,2,15,1" Width="130" Height="26" Background="#f8c26b" Foreground="Black" Visibility="Visible"/>
                             <Button x:Name="RefreshTableButton" Content="Refresh table" Click="RefreshTableButton_Click" Width="130" Height="26"  Margin="10,2,15,1" Background="#f8c26b" Foreground="Black" Visibility="Hidden"/>
+                            <Button x:Name="CancleButton" Content="Cancle"  Width="130" Height="26"  Margin="10,2,15,1" Background="#f8c26b" Foreground="Black" Visibility="Hidden" Click="CancleButton_Click"/>
                         </StackPanel>
                     </Grid>
                 </Border>

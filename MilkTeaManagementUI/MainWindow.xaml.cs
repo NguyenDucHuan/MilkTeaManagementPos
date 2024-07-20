@@ -1,5 +1,6 @@
 ﻿using MilkTeaManagement.BLL.Services;
 using MilkTeaManagement.DAL.Entities;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
@@ -42,7 +43,6 @@ namespace MilkTeaManagementUI
             DataContext = this;
             ListViewProduct.ItemsSource = products;
         }
-
         public void LoadLoginUser()
         {
             _employeeService = new EmployeeService();
@@ -56,40 +56,39 @@ namespace MilkTeaManagementUI
             if (CurBill != null)
             {
                 ListViewOrder.ItemsSource = CurBill.TbBillDetailts;
-
+                if (CurBill.IdTable != null)
+                {
+                    TableChoosedTextBlock.Content = "Table: " + _tableService.GetTableList().Where(t => t.Id == CurBill.IdTable).FirstOrDefault().NameTb;
+                }
+                TotalMoneyTextBlock.Text = "Total money:\n " + CurBill.TotalMoney.ToString() + " VND";
             }
+            CheckoutOrderButton.Visibility = Visibility.Visible;
+            ClearOrderButton.Visibility = Visibility.Visible;
+            RefreshTableButton.Visibility = Visibility.Hidden;
+            CancleButton.Visibility = Visibility.Hidden;
         }
-
         public void LoadTable()
         {
             if (TablesOnUse != null)
             {
+                ListViewTableOnUse.ItemsSource = null;
+                ListViewTable.ItemsSource = null;
                 var tables = _tableService.GetTableList();
                 ListViewTable.ItemsSource = tables.Where(t => !TablesOnUse.Any(p2 => p2.Id == t.Id));
                 ListViewTableOnUse.ItemsSource = TablesOnUse;
             }
             else
             {
+                ListViewTableOnUse.ItemsSource = null;
+                ListViewTable.ItemsSource = null;
                 ListViewTable.ItemsSource = _tableService.GetTableList();
             }
 
         }
-        public void ListViewTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (CurBill == null)
-                CurBill = new();
-            long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
-            if (ListViewTable.SelectedItem != null)
-            {
-                CurBill.IdTable = (ListViewTable.SelectedItem as TbTable).Id;
-                CurBill.IdUser = loggedInEmpID;
-                Application.Current.Properties["CurBill"] = CurBill;
-                TableChoosedTextBlock.Content = "Table: " + (ListViewTable.SelectedItem as TbTable).NameTb;
-            }
-            ListViewTableOnUse.SelectedItem = null;
-        }
+
         public void Product_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ListViewOrder.ItemsSource = null;
             ProductChoosed productChoosed = new ProductChoosed();
             if (ListViewProduct.SelectedItem != null)
             {
@@ -109,8 +108,6 @@ namespace MilkTeaManagementUI
             ListViewProduct.SelectedItem = null;
             LoadCurOrder();
         }
-
-
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();
@@ -125,7 +122,6 @@ namespace MilkTeaManagementUI
             var storyboard = (Storyboard)FindResource("OpenMenu");
             storyboard.Begin();
         }
-
         private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
         {
             ButtonOpenMenu.Visibility = Visibility.Visible;
@@ -133,7 +129,51 @@ namespace MilkTeaManagementUI
             var storyboard = (Storyboard)FindResource("CloseMenu");
             storyboard.Begin();
         }
+        private void UpdateTotalMoney()
+        {
+            double totalMoney = 0;
+            if (CurBill != null)
+            {
+                if (CurBill.TbBillDetailts.Count != 0)
+                {
+                    foreach (var billDetail in CurBill.TbBillDetailts)
+                    {
+                        totalMoney = totalMoney + (double)billDetail.IntoMoney;
+                    }
+                    CurBill.TotalMoney = totalMoney;
+                }
+            }
+        }
+        private void ClearOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            CurBill = null;
+            LoadCurOrder();
+            TableChoosedTextBlock.Content = "";
+            TotalMoneyTextBlock.Text = "";
+        }
+        private void StackPanel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            AddProduct addProduct = new AddProduct();
+            addProduct.ShowDialog();
+            LoadMenu();
+        }
+        private void RefreshTableButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (OldBill != null)
+            {
+                var g = TablesOnUse.Where(c => c.Id == OldBill.IdTable).FirstOrDefault();
+                TablesOnUse.Remove(g);
+                ListViewOrder.ItemsSource = null;
+                LoadTable();
+                TableChoosedTextBlock.Content = "";
+                TotalMoneyTextBlock.Text = "";
 
+            }
+            CheckoutOrderButton.Visibility = Visibility.Visible;
+            ClearOrderButton.Visibility = Visibility.Visible;
+            RefreshTableButton.Visibility = Visibility.Hidden;
+            CancleButton.Visibility = Visibility.Hidden;
+        }
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
             if (CurBill.IdTable == null)
@@ -169,79 +209,55 @@ namespace MilkTeaManagementUI
                 TotalMoneyTextBlock.Text = "";
             }
         }
-        private void UpdateTotalMoney()
+        private void ListViewTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            double totalMoney = 0;
-            if (CurBill != null)
+            if (CurBill == null)
+                CurBill = new();
+            else
             {
-                if (CurBill.TbBillDetailts.Count != 0)
-                {
-                    foreach (var billDetail in CurBill.TbBillDetailts)
-                    {
-                        totalMoney = totalMoney + (double)billDetail.IntoMoney;
-                    }
-                    CurBill.TotalMoney = totalMoney;
-                }
+                ListViewOrder.ItemsSource = null;
             }
-        }
-
-        private void ClearOrderButton_Click(object sender, RoutedEventArgs e)
-        {
-            CurBill = null;
+            long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
+            if (ListViewTable.SelectedItem != null)
+            {
+                CurBill.IdTable = (ListViewTable.SelectedItem as TbTable).Id;
+                CurBill.IdUser = loggedInEmpID;
+                Application.Current.Properties["CurBill"] = CurBill;
+                TableChoosedTextBlock.Content = "Table: " + (ListViewTable.SelectedItem as TbTable).NameTb;
+            }
             LoadCurOrder();
-            TableChoosedTextBlock.Content = "";
-            TotalMoneyTextBlock.Text = "";
+            ListViewTable.SelectedItem = null;
         }
-        private void StackPanel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            AddProduct addProduct = new AddProduct();
-            addProduct.ShowDialog();
-            LoadMenu();
-        }
-        private void RefreshTableButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (OldBill != null)
-            {
-
-                if (TablesOnUse != null)
-                {
-                    TablesOnUse.Remove(_tableService.GetTableList().Where(c => c.Id == OldBill.IdTable).FirstOrDefault());
-                }
-                else
-                {
-                    TablesOnUse = new();
-                    TablesOnUse.Remove(_tableService.GetTableList().Where(c => c.Id == OldBill.IdTable).FirstOrDefault());
-                }
-                LoadTable();
-                LoadCurOrder();
-                TableChoosedTextBlock.Content = "";
-                TotalMoneyTextBlock.Text = "";
-
-            }
-
-            ListViewTableOnUse.SelectedItem = null;
-            CheckoutOrderButton.Visibility = Visibility.Visible;
-            ClearOrderButton.Visibility = Visibility.Visible;
-            RefreshTableButton.Visibility = Visibility.Hidden;
-        }
-
         private void ListViewTableOnUse_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var tableID = (ListViewTableOnUse.SelectedItem as TbTable).Id;
-            var lastestBill = _billService.GetLastestBillFromTableID(tableID);
-            ListViewOrder.ItemsSource = null;
-            if (lastestBill != null)
+            if (ListViewTableOnUse.SelectedItem != null)
             {
-                ListViewOrder.ItemsSource = lastestBill.TbBillDetailts;
-                TableChoosedTextBlock.Content = "Ordering On Table: " + (ListViewTableOnUse.SelectedItem as TbTable).NameTb;
-                TotalMoneyTextBlock.Text = "Total money:\n " + lastestBill.TotalMoney.ToString() + " VND";
+                long tableID = (ListViewTableOnUse.SelectedItem as TbTable).Id;
+                var lastBillByTable = _billService.GetLastestBillFromTableID(tableID);
+                ListViewOrder.ItemsSource = null;
+                if (lastBillByTable != null)
+                {
+                    ListViewOrder.ItemsSource = lastBillByTable.TbBillDetailts;
+                    TableChoosedTextBlock.Content = "Ordering On Table: " + (ListViewTableOnUse.SelectedItem as TbTable).NameTb;
+                    TotalMoneyTextBlock.Text = "Total money:\n " + lastBillByTable.TotalMoney.ToString() + " VND";
+                }
+                OldBill = lastBillByTable;
             }
-            OldBill = new TbBill();
-            OldBill = lastestBill;
+            ListViewTableOnUse.SelectedItem = null;
+            LoadTable();
             CheckoutOrderButton.Visibility = Visibility.Hidden;
             ClearOrderButton.Visibility = Visibility.Hidden;
             RefreshTableButton.Visibility = Visibility.Visible;
-
+            CancleButton.Visibility = Visibility.Visible;
+        }
+        private void CancleButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoadCurOrder();
+            TableChoosedTextBlock.Content = "";
+            CheckoutOrderButton.Visibility = Visibility.Visible;
+            ClearOrderButton.Visibility = Visibility.Visible;
+            RefreshTableButton.Visibility = Visibility.Hidden;
+            CancleButton.Visibility = Visibility.Hidden;
         }
     }
 }
