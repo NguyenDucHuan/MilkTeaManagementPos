@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\TERM5\PRN212\PRN212_AssignmentProject\MilkTeaManagementUI\obj\Debug\net8.0-windows\
+E:\AssPRN\PRN212_AssignmentProject\MilkTeaManagementUI\obj\Debug\net8.0-windows\
 MilkTeaManagementUI
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\TERM5\PRN212\PRN212_AssignmentProject\MilkTeaManagementUI\App.xaml
+E:\AssPRN\PRN212_AssignmentProject\MilkTeaManagementUI\App.xaml
 5863854943
 
 102023113622
-249899837472
+249-1546223608
 AddProduct.xaml;AddProductGroup.xaml;LoginWindow.xaml;MainWindow.xaml;ProductChoosed.xaml;
 
-False
+True
 

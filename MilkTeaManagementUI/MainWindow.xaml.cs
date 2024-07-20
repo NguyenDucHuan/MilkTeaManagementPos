@@ -86,6 +86,7 @@ namespace MilkTeaManagementUI
                 Application.Current.Properties["CurBill"] = CurBill;
                 TableChoosedTextBlock.Content = "Table: " + (ListViewTable.SelectedItem as TbTable).NameTb;
             }
+            ListViewTableOnUse.SelectedItem = null;
         }
         public void Product_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -150,6 +151,7 @@ namespace MilkTeaManagementUI
                 _billDetailService.CreateNewBillDetails((List<TbBillDetailt>)CurBill.TbBillDetailts);
                 MessageBoxResult answer = MessageBox.Show("Check out complete", "Complete!!",
                     MessageBoxButton.OK, MessageBoxImage.Information);
+
                 if (TablesOnUse != null)
                 {
                     TablesOnUse.Add(_tableService.GetTableList().Where(c => c.Id == CurBill.IdTable).FirstOrDefault());
@@ -201,6 +203,20 @@ namespace MilkTeaManagementUI
             if (OldBill != null)
             {
 
+                if (TablesOnUse != null)
+                {
+                    TablesOnUse.Remove(_tableService.GetTableList().Where(c => c.Id == OldBill.IdTable).FirstOrDefault());
+                }
+                else
+                {
+                    TablesOnUse = new();
+                    TablesOnUse.Remove(_tableService.GetTableList().Where(c => c.Id == OldBill.IdTable).FirstOrDefault());
+                }
+                LoadTable();
+                LoadCurOrder();
+                TableChoosedTextBlock.Content = "";
+                TotalMoneyTextBlock.Text = "";
+
             }
 
             ListViewTableOnUse.SelectedItem = null;
@@ -211,7 +227,7 @@ namespace MilkTeaManagementUI
 
         private void ListViewTableOnUse_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var tableID = (long)(ListViewTableOnUse.SelectedItem as TbTable).Id;
+            var tableID = (ListViewTableOnUse.SelectedItem as TbTable).Id;
             var lastestBill = _billService.GetLastestBillFromTableID(tableID);
             ListViewOrder.ItemsSource = null;
             if (lastestBill != null)
@@ -225,6 +241,7 @@ namespace MilkTeaManagementUI
             CheckoutOrderButton.Visibility = Visibility.Hidden;
             ClearOrderButton.Visibility = Visibility.Hidden;
             RefreshTableButton.Visibility = Visibility.Visible;
+
         }
     }
 }
