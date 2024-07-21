@@ -18,5 +18,18 @@ namespace MilkTeaManagement.DAL.Repositories
             _context = new MilkTeaContext();
             return _context.Logins.Include(l => l.LoginRoles).Where(x => x.IdEmployee == loggedInEmpID).SingleOrDefault();
         }
+
+        public void AddAccount(Login login)
+        {
+            _context = new MilkTeaContext();
+            _context.Logins.Add(login);
+            _context.SaveChanges();
+        }
+
+        public Login GetLastEmployee()
+        {
+            _context = new MilkTeaContext();
+            return _context.Logins.OrderByDescending(x => x.Id).FirstOrDefault();
+        }
     }
 }

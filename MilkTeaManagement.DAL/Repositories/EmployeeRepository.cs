@@ -31,5 +31,11 @@ namespace MilkTeaManagement.DAL.Repositories
             _context.SaveChanges();
         }
 
+        public Employee GetLastEmployee()
+        {
+            _context = new MilkTeaContext();
+            return _context.Employees.OrderByDescending(x => x.Id).FirstOrDefault();
+        }
+
     }
 }

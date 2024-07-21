@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MilkTeaManagement.DAL\MilkTeaManagement.DAL.csproj" />
+    <ProjectReference Include="..\MilkTeaManagement.DAL\MilkTeaManagement.DAL.csproj">
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

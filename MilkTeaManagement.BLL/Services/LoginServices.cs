@@ -47,6 +47,16 @@ namespace MilkTeaManagement.BLL.Services
         {
             return _repository.GetLoginByEmpID(loggedInEmpID);
         }
+
+        public void AddAccount(Login login)
+        {
+            _repository.AddAccount(login);
+        }
+
+        public Login GetLastEmployee()
+        {
+            return _repository.GetLastEmployee();
+        }
     }
 
 }
