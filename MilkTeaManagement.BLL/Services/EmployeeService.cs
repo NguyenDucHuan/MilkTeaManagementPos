@@ -21,9 +21,24 @@ namespace MilkTeaManagement.BLL.Services
         {
             _employeeRepository.Add(employee);
         }
+
         public Employee GetLastEmployee()
         {
-            return _employeeRepository.GetLastEmployee();
+            var emp = _employeeRepository.GetAll();
+            return emp.OrderByDescending(p => p.Id).FirstOrDefault();
+        }
+
+        public void UpdateEmployee(Employee employee)
+        {
+            _employeeRepository.Update(employee);
+        }
+        public void DeleteEmployee(Employee employee)
+        {
+            _employeeRepository.Delete(employee);
+        }
+        public Employee GetEmployeeById(long id)
+        {
+            return _employeeRepository.GetAll().FirstOrDefault(p => p.Id == id);
         }
     }
 }

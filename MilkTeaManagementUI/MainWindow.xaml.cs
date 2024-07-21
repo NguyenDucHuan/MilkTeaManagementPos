@@ -273,7 +273,8 @@ namespace MilkTeaManagementUI
 
         private void Accounts_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-
+            AccountManagement accountManagement = new AccountManagement();
+            accountManagement.ShowDialog();
         }
     }
 }
