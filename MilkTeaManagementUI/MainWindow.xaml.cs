@@ -75,7 +75,7 @@ namespace MilkTeaManagementUI
         }
         public void LoadTable()
         {
-            if (TablesOnUse != null)
+            if (TablesOnUse != null && TablesOnUse.Count > 0)
             {
                 ListViewTableOnUse.ItemsSource = null;
                 ListViewTable.ItemsSource = null;
@@ -181,7 +181,7 @@ namespace MilkTeaManagementUI
         }
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
-            if (CurBill == null)
+            if (CurBill == null || CurBill.IdTable == null)
             {
                 MessageBoxResult answer = MessageBox.Show("Please choose table!!", "No choose table!!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }

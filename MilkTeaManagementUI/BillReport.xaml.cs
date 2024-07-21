@@ -1,6 +1,7 @@
 ﻿using MilkTeaManagement.BLL.Services;
 using MilkTeaManagement.DAL.Entities;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace MilkTeaManagementUI
 {
@@ -41,11 +42,21 @@ namespace MilkTeaManagementUI
                 MessageBox.Show("Please select a bill to view detail");
             }
         }
-
-        private void BillDataGrid_AutoGeneratingColumn(object sender, System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs e)
+        private void SearchByDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var date = DateTime.Parse(SearchByDatePicker.Text);
+            _billService.GetByDate(date);
+            if (date != null)
+            {
+                BillDataGrid.ItemsSource = null;
+                BillDataGrid.ItemsSource = _billService.GetByDate(date);
+            }
+            else
+            {
+                MessageBox.Show("Please select a date to search");
+            }
         }
+
     }
 }
 

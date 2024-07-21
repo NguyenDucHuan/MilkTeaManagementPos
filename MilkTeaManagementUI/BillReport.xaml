@@ -13,15 +13,13 @@
                 <DataGridTextColumn Header="Bill ID" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Bill Date" Binding="{Binding BillDate}"/>
                 <DataGridTextColumn Header="Total Money" Binding="{Binding TotalMoney}"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
-                <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
                 <DataGridTextColumn Header="Username" Binding="{Binding IdUserNavigation.UserName}"/>
                 <DataGridTextColumn Header="Table Name" Binding="{Binding IdTableNavigation.NameTb}"/>
             </DataGrid.Columns>
 
         </DataGrid>
         <Button x:Name="ViewDetailButton" Content="View Detail" HorizontalAlignment="Left" Margin="1274,33,0,0" VerticalAlignment="Top" Click="ViewDetailButton_Click"/>
+        <DatePicker x:Name="SearchByDatePicker" HorizontalAlignment="Left" Margin="1172,93,0,0" VerticalAlignment="Top" Width="206" SelectedDateChanged="SearchByDatePicker_SelectedDateChanged"/>
 
     </Grid>
 </Window>

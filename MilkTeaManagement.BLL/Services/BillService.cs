@@ -22,5 +22,10 @@ namespace MilkTeaManagement.BLL.Services
         {
             return _repo.GetAll();
         }
+
+        public List<TbBill> GetByDate(DateTime dateTime)
+        {
+            return _repo.GetByDate(dateTime);
+        }
     }
 }
