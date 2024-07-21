@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MilkTeaManagement.DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MilkTeaManagement.DAL.Repositories
 {
@@ -38,7 +33,12 @@ namespace MilkTeaManagement.DAL.Repositories
         public List<TbBill> GetAll()
         {
             _context = new MilkTeaContext();
-            return _context.TbBills.Include(b => b.TbBillDetailts).ThenInclude(d => d.IdProductNavigation).ToList();
+            return _context.TbBills
+                .Include(b => b.TbBillDetailts)
+                    .ThenInclude(d => d.IdProductNavigation)
+                .Include(b => b.IdTableNavigation)
+                .Include(b => b.IdUserNavigation)
+                .ToList();
         }
         public void Update(TbBill x)
         {

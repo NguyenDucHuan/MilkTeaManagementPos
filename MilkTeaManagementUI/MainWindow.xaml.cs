@@ -1,7 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MilkTeaManagement.BLL.Services;
+﻿using MilkTeaManagement.BLL.Services;
 using MilkTeaManagement.DAL.Entities;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
@@ -158,7 +156,7 @@ namespace MilkTeaManagementUI
             TableChoosedTextBlock.Content = "";
             TotalMoneyTextBlock.Text = "";
         }
-        private void StackPanel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ProductStackPanel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             AddProduct addProduct = new AddProduct();
             addProduct.ShowDialog();
@@ -269,7 +267,8 @@ namespace MilkTeaManagementUI
 
         private void BillsStackPanel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-
+            BillReport billReport = new BillReport();
+            billReport.ShowDialog();
         }
 
         private void Accounts_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

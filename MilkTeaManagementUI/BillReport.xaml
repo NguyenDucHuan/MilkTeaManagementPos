@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MilkTeaManagementUI"
         mc:Ignorable="d"
-        Title="BillReport" Height="450" Width="800">
+        Title="BillReport" Height="800" Width="1400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        
+        <Label Content="Bill Report" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="46" Width="155" FontSize="25"/>
+        <DataGrid x:Name="BillDataGrid" Margin="30,132,22,28"  AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Bill Date" Binding="{Binding BillDate}"/>
+                <DataGridTextColumn Header="Total Money" Binding="{Binding TotalMoney}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
+                <DataGridTextColumn Header="Username" Binding="{Binding IdUserNavigation.UserName}"/>
+                <DataGridTextColumn Header="Table Name" Binding="{Binding IdTableNavigation.NameTb}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="ViewDetailButton" Content="View Detail" HorizontalAlignment="Left" Margin="1274,33,0,0" VerticalAlignment="Top" Click="ViewDetailButton_Click"/>
+
     </Grid>
 </Window>

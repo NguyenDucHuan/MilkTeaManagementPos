@@ -1,16 +1,11 @@
 ﻿using MilkTeaManagement.DAL.Entities;
 using MilkTeaManagement.DAL.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MilkTeaManagement.BLL.Services
 {
     public class BillService
     {
-        private BillRepository _repo;
+        private BillRepository _repo = new();
 
         public void CreateNewBill(TbBill tbBill)
         {
@@ -21,6 +16,11 @@ namespace MilkTeaManagement.BLL.Services
         {
             var bills = _repo.GetAll();
             return bills.Where(t => t.IdTable == tableID).ToList().OrderByDescending(p => p.BillDate).FirstOrDefault();
+        }
+
+        public List<TbBill> GetAllBills()
+        {
+            return _repo.GetAll();
         }
     }
 }

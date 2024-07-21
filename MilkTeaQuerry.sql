@@ -1,4 +1,4 @@
-﻿create database [MilkTea]
+﻿drop database [MilkTea]
 
 USE [MilkTea]
 GO
@@ -61,6 +61,10 @@ CREATE TABLE [dbo].[tbGroupProduct](
 GO
 INSERT [dbo].[tbGroupProduct] ( [nameGr], [descriptionGr]) VALUES ( N'Đồ uống', N'danh sách đồ uống')
 INSERT [dbo].[tbGroupProduct] ( [nameGr], [descriptionGr]) VALUES ( N'Đồ ăn vặt', NULL)
+INSERT [dbo].[tbGroupProduct] ( [nameGr], [descriptionGr]) VALUES ( N'Cà phê', N'Các loại cà phê')
+INSERT [dbo].[tbGroupProduct] ( [nameGr], [descriptionGr]) VALUES (N'Trà', N'Các loại trà')
+INSERT [dbo].[tbGroupProduct] ( [nameGr], [descriptionGr]) VALUES (N'Bánh ngọt', N'Các loại bánh ngọt')
+INSERT [dbo].[tbGroupProduct] ( [nameGr], [descriptionGr]) VALUES (N'Kem', N'Các loại kem')
 GO
 -- Product table
 CREATE TABLE [dbo].[tbProduct](
@@ -73,6 +77,35 @@ CREATE TABLE [dbo].[tbProduct](
 	[img] [varbinary](max) NULL,
 	FOREIGN KEY (idGroupProduct) REFERENCES tbGroupProduct(idGr)
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+-- Thêm dữ liệu vào tbProduct
+-- Lưu ý: Chúng ta sẽ sử dụng NULL cho cột img vì nó là kiểu varbinary(max)
+INSERT INTO [dbo].[tbProduct] ([idGroupProduct], [name], [unit], [unitPrice], [description], [img]) VALUES
+-- Nhóm Đồ uống (idGr = 1)
+(3, N'Cà phê đen', N'Ly', 25000, N'Cà phê đen truyền thống', NULL),
+(3, N'Cà phê sữa', N'Ly', 30000, N'Cà phê pha với sữa đặc', NULL),
+(1, N'Nước cam', N'Ly', 35000, N'Nước cam tươi ép', NULL),
+
+-- Nhóm Đồ ăn vặt (idGr = 2)
+(2, N'Khoai tây chiên', N'Phần', 20000, N'Khoai tây chiên giòn', NULL),
+(2, N'Bánh mì nướng bơ tỏi', N'Phần', 25000, N'Bánh mì nướng với bơ tỏi', NULL),
+
+-- Nhóm Cà phê (idGr = 3)
+(3, N'Cà phê Espresso', N'Shot', 30000, N'Cà phê đậm đặc kiểu Ý', NULL),
+(3, N'Cappuccino', N'Ly', 45000, N'Cà phê Espresso với sữa nóng và bọt sữa', NULL),
+
+-- Nhóm Trà (idGr = 4)
+(4, N'Trà xanh', N'Ly', 20000, N'Trà xanh truyền thống', NULL),
+(4, N'Trà đào', N'Ly', 35000, N'Trà oolong pha với đào tươi', NULL),
+
+-- Nhóm Bánh ngọt (idGr = 5)
+(5, N'Bánh Tiramisu', N'Miếng', 40000, N'Bánh Tiramisu truyền thống', NULL),
+(5, N'Bánh Cheesecake', N'Miếng', 45000, N'Bánh phô mai New York', NULL),
+
+-- Nhóm Kem (idGr = 6)
+(6, N'Kem Vanilla', N'Viên', 15000, N'Kem vị vanilla truyền thống', NULL),
+(6, N'Kem Socola', N'Viên', 15000, N'Kem vị socola đậm đà', NULL);
 GO
 -- GroupTb table
 CREATE TABLE [dbo].[tbGroupTb](

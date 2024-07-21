@@ -233,7 +233,7 @@
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="60">
-                        <StackPanel x:Name="ItemCreateStackpanel" Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
+                        <StackPanel x:Name="ItemCreateStackpanel" Orientation="Horizontal" MouseLeftButtonDown="ProductStackPanel_MouseLeftButtonDown">
                             <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10"/>
                             <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
