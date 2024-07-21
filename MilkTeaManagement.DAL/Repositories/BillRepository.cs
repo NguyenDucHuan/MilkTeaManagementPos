@@ -60,5 +60,17 @@ namespace MilkTeaManagement.DAL.Repositories
             _context.SaveChanges();
         }
 
+        public List<TbBill> GetBillsLast30Day()
+        {
+            _context = new MilkTeaContext();
+            var thirtyDaysAgo = DateTime.Now.AddDays(-30);
+            return _context.TbBills
+                .Include(b => b.TbBillDetailts)
+                    .ThenInclude(d => d.IdProductNavigation)
+                .Include(b => b.IdTableNavigation)
+                .Include(b => b.IdUserNavigation)
+                .Where(bill => bill.BillDate >= thirtyDaysAgo)
+                .ToList();
+        }
     }
 }
