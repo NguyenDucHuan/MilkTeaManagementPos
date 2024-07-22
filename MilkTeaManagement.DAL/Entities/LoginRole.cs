@@ -9,9 +9,9 @@ public partial class LoginRole
 
     public long IdLogin { get; set; }
 
-    public int IdMenuItems { get; set; }
+    public int IdRole { get; set; }
 
     public virtual Login IdLoginNavigation { get; set; } = null!;
 
-    public virtual MenuItem IdMenuItemsNavigation { get; set; } = null!;
+    public virtual TbRole IdRoleNavigation { get; set; } = null!;
 }

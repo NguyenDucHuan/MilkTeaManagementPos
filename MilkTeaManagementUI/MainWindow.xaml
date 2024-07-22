@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="656" Width="1080" Foreground="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+        mc:Ignorable="d" Height="749" Width="1151" Foreground="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -30,7 +30,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="#FFDEDEDE">
-        <Grid x:Name="GridMain" HorizontalAlignment="Left" VerticalAlignment="Center" Height="636" Width="1010" />
+        <Grid x:Name="GridMain" HorizontalAlignment="Center" VerticalAlignment="Center" Height="754" Width="1151" />
         <Grid Height="60" VerticalAlignment="Top" Background="#c7b49e">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
@@ -48,21 +48,21 @@
             </StackPanel>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="30">CASHIER</TextBlock>
         </Grid>
-        <Grid x:Name="GridContent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="581" Width="1005" >
+        <Grid x:Name="GridContent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="685" Width="1080" >
             <Grid x:Name="GridProductOrder"   >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="61*"/>
                     <ColumnDefinition Width="515*"/>
                     <ColumnDefinition Width="434*"/>
                 </Grid.ColumnDefinitions>
-                <Border Background="#fffcf8" HorizontalAlignment="Center" Width="542" Grid.ColumnSpan="2" Margin="0,0,0,287">
+                <Border Background="#fffcf8" HorizontalAlignment="Center" Width="566" Grid.ColumnSpan="2" Margin="0,0,0,289">
                     <StackPanel HorizontalAlignment="Center" Width="522">
                         <TextBlock Text="PRODUCT" FontSize="18" Foreground="Black" FontWeight="DemiBold"/>
-                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="273">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="360">
                             <ListView x:Name="ListViewProduct" Background="White" SelectionChanged="Product_SelectionChanged">
                                 <ListView.ItemsPanel>
                                     <ItemsPanelTemplate>
-                                        <UniformGrid Columns="4" />
+                                        <UniformGrid Columns="3" />
                                     </ItemsPanelTemplate>
                                 </ListView.ItemsPanel>
                                 <ListView.ItemTemplate>
@@ -71,7 +71,7 @@
                                             <StackPanel>
                                                 <Image Width="100" Height="100" Source="{Binding Img}" Stretch="UniformToFill"/>
                                                 <TextBlock Text="{Binding Name}" Margin="5 3" HorizontalAlignment="Center"/>
-                                                <TextBlock Text="{Binding UnitPrice}" Margin="5 3" HorizontalAlignment="Center"/>
+                                                <TextBlock Text="{Binding UnitPrice , StringFormat={}{0:N0} VND}" Margin="5 3" HorizontalAlignment="Center"/>
                                             </StackPanel>
                                         </Border>
                                     </DataTemplate>
@@ -88,15 +88,7 @@
                 </Border>
 
 
-                <Border Background="#fffcf8" Margin="17,306,291,38" Padding="10" Grid.ColumnSpan="2">
-                    <Border.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.529"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Border.RenderTransform>
+                <Border Background="#fffcf8" Margin="26,408,321,21" Padding="10" Grid.ColumnSpan="2">
 
                     <StackPanel Margin="0,0,0,27">
                         <!--Tạo list nút lấy từ _tableGroupService.GetTableGroupList -->
@@ -126,19 +118,12 @@
                         </ScrollViewer>
                     </StackPanel>
                 </Border>
-                <Border Background="#fffcf8" Margin="227,309,15,35" Padding="10" Grid.Column="1">
-                    <Border.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.529"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Border.RenderTransform>
+                <Border Background="#fffcf8" Margin="239,408,25,22" Padding="10" Grid.Column="1">
+
                     <StackPanel Margin="0,0,0,27">
                         <!--Tạo list nút lấy từ _tableGroupService.GetTableGroupList -->
-                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                            <ListView x:Name="ListViewTableOnUse" Background="White" SelectionChanged="ListViewTableOnUse_SelectionChanged" >
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
+                            <ListView x:Name="ListViewTableOnUse" Background="White" SelectionChanged="ListViewTableOnUse_SelectionChanged"  >
                                 <ListView.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <UniformGrid Columns="3" />
@@ -164,11 +149,11 @@
                     </StackPanel>
                 </Border>
                 <!-- Order List -->
-                <Border Grid.Column="2" Background="#fffcf8" Margin="10,0,10,270" Padding="10">
+                <Border Grid.Column="2" Background="#fffcf8" Margin="10,0,10,235" Padding="10">
                     <StackPanel>
                         <Label x:Name="TableChoosedTextBlock" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 10"/>
                         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                            <ListView x:Name="ListViewOrder" Background="#FFFFFF" Height="264">
+                            <ListView x:Name="ListViewOrder" Background="#FFFFFF" >
                                 <ListView.View>
                                     <GridView>
                                         <GridViewColumn Header="Name" Width="Auto" DisplayMemberBinding="{Binding IdProductNavigation.Name}"/>
@@ -182,7 +167,7 @@
 
                     </StackPanel>
                 </Border>
-                <Border Grid.Column="2" Margin="11,326,11,117" Background="#fffcf8" RenderTransformOrigin="0.5,0.5">
+                <Border Grid.Column="2" Margin="11,462,11,90" Background="#fffcf8" RenderTransformOrigin="0.5,0.5">
                     <Grid Margin="4,7,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -195,13 +180,14 @@
                             <Button x:Name="ClearOrderButton" Content="ClearOrder" Width="130" Margin="10,0,15,1" Height="27" Background="#f8c26b" Foreground="Black" Click="ClearOrderButton_Click" Visibility="Visible"/>
                             <Button x:Name="CheckoutOrderButton" Content="Checkout" Click="CheckoutButton_Click" Margin="10,2,15,1" Width="130" Height="26" Background="#f8c26b" Foreground="Black" Visibility="Visible"/>
                             <Button x:Name="RefreshTableButton" Content="Refresh table" Click="RefreshTableButton_Click" Width="130" Height="26"  Margin="10,2,15,1" Background="#f8c26b" Foreground="Black" Visibility="Hidden"/>
+                            <Button x:Name="CancelButton" Content="Cancle"  Width="130" Height="26"  Margin="10,2,15,1" Background="#f8c26b" Foreground="Black" Visibility="Hidden" Click="CancelButton_Click"/>
                         </StackPanel>
                     </Grid>
                 </Border>
             </Grid>
 
         </Grid>
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#c7b49e">
+        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#c7b49e" Visibility="Visible">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>
@@ -225,28 +211,28 @@
                 </Grid>
 
                 <ListView x:Name="ListViewMenu" Foreground="black" >
-                    <ListViewItem x:Name="ItemHome" Height="60">
-                        <StackPanel Orientation="Horizontal">
+                    <ListViewItem x:Name="ItemBill" Height="60" >
+                        <StackPanel x:Name="BillsStackPanel" Orientation="Horizontal" MouseLeftButtonDown="BillsStackPanel_MouseLeftButtonDown">
                             <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Bills" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemCreate" Height="60">
-                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
+                        <StackPanel x:Name="ItemCreateStackpanel" Orientation="Horizontal" MouseLeftButtonDown="ProductStackPanel_MouseLeftButtonDown">
                             <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10"/>
                             <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Ticket" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Tickets" VerticalAlignment="Center"  Margin="20 10"/>
+                    <ListViewItem Height="60" >
+                        <StackPanel x:Name="Accounts" Orientation="Horizontal" MouseLeftButtonDown="Accounts_MouseLeftButtonDown">
+                            <materialDesign:PackIcon Kind="AccountFile" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Accounts" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
-                            <TextBlock Text="Messages" VerticalAlignment="Center"  Margin="20 10"/>
+                    <ListViewItem Height="60" >
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="ListViewItem_MouseLeftButtonDown" >
+                            <materialDesign:PackIcon Kind="Folder" Height="25" Width="25" Margin="10"/>
+                            <TextBlock Text="Reports" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

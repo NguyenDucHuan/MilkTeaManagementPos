@@ -7,10 +7,22 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AccountDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AccountManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AddProduct.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AddProductGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BillDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BillReport.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="LoginWindow.xaml.cs">
@@ -22,12 +34,27 @@
     <Compile Update="ProductChoosed.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ReportWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AccountDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AccountManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="AddProduct.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AddProductGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BillDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BillReport.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LoginWindow.xaml">
@@ -37,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProductChoosed.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

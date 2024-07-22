@@ -1,0 +1,25 @@
+﻿<Window x:Class="MilkTeaManagementUI.BillReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MilkTeaManagementUI"
+        mc:Ignorable="d"
+        Title="BillReport" Height="800" Width="1400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Bill Report" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="46" Width="155" FontSize="25"/>
+        <DataGrid x:Name="BillDataGrid" Margin="30,132,22,28"  AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Bill Date" Binding="{Binding BillDate}"/>
+                <DataGridTextColumn Header="Total Money" Binding="{Binding TotalMoney}"/>
+                <DataGridTextColumn Header="Username" Binding="{Binding IdUserNavigation.UserName}"/>
+                <DataGridTextColumn Header="Table Name" Binding="{Binding IdTableNavigation.NameTb}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="ViewDetailButton" Content="View Detail" HorizontalAlignment="Left" Margin="1274,33,0,0" VerticalAlignment="Top" Click="ViewDetailButton_Click"/>
+        <DatePicker x:Name="SearchByDatePicker" HorizontalAlignment="Left" Margin="1172,93,0,0" VerticalAlignment="Top" Width="206" SelectedDateChanged="SearchByDatePicker_SelectedDateChanged"/>
+
+    </Grid>
+</Window>

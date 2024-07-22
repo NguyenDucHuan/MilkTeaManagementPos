@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MilkTeaManagement.DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MilkTeaManagement.DAL.Repositories
 {
@@ -21,7 +16,6 @@ namespace MilkTeaManagement.DAL.Repositories
                 Description = x.Description,
                 BillDate = x.BillDate,
                 IdUser = x.IdUser,
-                IdCustomer = x.IdCustomer,
                 Status = x.Status,
                 IdTable = x.IdTable
             };
@@ -39,7 +33,25 @@ namespace MilkTeaManagement.DAL.Repositories
         public List<TbBill> GetAll()
         {
             _context = new MilkTeaContext();
-            return _context.TbBills.Include(b => b.TbBillDetailts).ThenInclude(d => d.IdProductNavigation).ToList();
+            return _context.TbBills
+                .Include(b => b.TbBillDetailts)
+                    .ThenInclude(d => d.IdProductNavigation)
+                .Include(b => b.IdTableNavigation)
+                .Include(b => b.IdUserNavigation)
+                .ToList();
+        }
+
+        public List<TbBill> GetByDate(DateTime dateTime)
+        {
+            _context = new MilkTeaContext();
+            return _context.TbBills
+                .Include(b => b.TbBillDetailts)
+                    .ThenInclude(d => d.IdProductNavigation)
+                .Include(b => b.IdTableNavigation)
+                .Include(b => b.IdUserNavigation)
+                .Where(b => b.BillDate.HasValue &&
+                            b.BillDate.Value.Date == dateTime.Date)
+                .ToList();
         }
         public void Update(TbBill x)
         {
@@ -48,5 +60,17 @@ namespace MilkTeaManagement.DAL.Repositories
             _context.SaveChanges();
         }
 
+        public List<TbBill> GetBillsLast30Day()
+        {
+            _context = new MilkTeaContext();
+            var thirtyDaysAgo = DateTime.Now.AddDays(-30);
+            return _context.TbBills
+                .Include(b => b.TbBillDetailts)
+                    .ThenInclude(d => d.IdProductNavigation)
+                .Include(b => b.IdTableNavigation)
+                .Include(b => b.IdUserNavigation)
+                .Where(bill => bill.BillDate >= thirtyDaysAgo)
+                .ToList();
+        }
     }
 }

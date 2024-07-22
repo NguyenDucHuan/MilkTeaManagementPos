@@ -1,0 +1,15 @@
+﻿<Window x:Class="MilkTeaManagementUI.BillDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MilkTeaManagementUI"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="BillDetail" Height="450" Width="800">
+    <Grid>
+        <materialDesign:PackIcon Kind="Worker" Height="50" Width="50" Margin="10"/>
+        <Label FontSize="40" Margin="50,2,20,2">Đang Phát Triển </Label>
+
+    </Grid>
+</Window>
