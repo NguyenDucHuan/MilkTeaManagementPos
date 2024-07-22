@@ -26,9 +26,10 @@ namespace MilkTeaManagement.DAL.Repositories
         {
             _context = new MilkTeaContext();
             return _context.TbBills
-                            .Include(b => b.TbBillDetailts)
-                            .Where(x => x.Id == id)
-                            .FirstOrDefault();
+                .Include(b => b.IdUserNavigation)
+                .Include(b => b.IdTableNavigation)
+                .Include(b => b.TbBillDetailts)
+                .FirstOrDefault(b => b.Id == id);
         }
         public List<TbBill> GetAll()
         {
