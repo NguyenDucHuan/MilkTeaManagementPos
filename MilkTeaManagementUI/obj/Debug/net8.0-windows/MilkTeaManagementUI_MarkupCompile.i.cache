@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\PRN212_AssignmentProject\MilkTeaManagementUI\obj\Debug\net8.0-windows\
+C:\Users\minht\Máy tính\PRN212_AssignmentProject\MilkTeaManagementUI\obj\Debug\net8.0-windows\
 MilkTeaManagementUI
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\PRN212_AssignmentProject\MilkTeaManagementUI\App.xaml
-9-1328441655
+C:\Users\minht\Máy tính\PRN212_AssignmentProject\MilkTeaManagementUI\App.xaml
+11-1689975172
 
-141447392475
-249-1994441160
-AccountDetail.xaml;AccountManagement.xaml;AddProduct.xaml;AddProductGroup.xaml;BillDetail.xaml;BillReport.xaml;LoginWindow.xaml;MainWindow.xaml;ProductChoosed.xaml;
+16-683499712
+252-1563249730
+AccountDetail.xaml;AccountManagement.xaml;AddProduct.xaml;AddProductGroup.xaml;BillDetail.xaml;BillReport.xaml;LoginWindow.xaml;MainWindow.xaml;ProductChoosed.xaml;ReportWindow.xaml;SettingsWindow.xaml;
 
 True
 

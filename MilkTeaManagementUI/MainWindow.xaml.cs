@@ -113,6 +113,11 @@ namespace MilkTeaManagementUI
             ListViewProduct.SelectedItem = null;
             LoadCurOrder();
         }
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.ShowDialog();
+        }
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();
