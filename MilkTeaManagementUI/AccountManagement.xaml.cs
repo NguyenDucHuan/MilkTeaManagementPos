@@ -71,7 +71,7 @@ namespace MilkTeaManagementUI
 
             var login = AccountDataGrid.SelectedItem as Login;
 
-            _loginRoleService.DeleteLoginRole(login);
+            _loginRoleService.DeleteLoginRole(login.LoginRoles.FirstOrDefault().Id);
 
             _loginServices.DeleteAccount(login);
 

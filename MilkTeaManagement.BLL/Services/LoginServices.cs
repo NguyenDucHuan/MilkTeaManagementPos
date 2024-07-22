@@ -58,6 +58,7 @@ namespace MilkTeaManagement.BLL.Services
         }
         public void AddAccount(Login login)
         {
+            login.Password = HashString(login.Password);
             _repository.Add(login);
         }
 
@@ -69,6 +70,10 @@ namespace MilkTeaManagement.BLL.Services
         public void DeleteAccount(Login login)
         {
             _repository.Delete(login);
+        }
+        public Login GetLoginNoHash(string userName, string password)
+        {
+            return _repository.GetLogin(userName, password);
         }
     }
 

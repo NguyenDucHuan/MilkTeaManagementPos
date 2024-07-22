@@ -10,7 +10,7 @@ namespace MilkTeaManagement.DAL.Repositories
         public Login GetLogin(string username, string password)
         {
             _context = new MilkTeaContext();
-            return _context.Logins.Include(l => l.LoginRoles).Where(x => x.UserName == username && x.Password == password).SingleOrDefault();
+            return _context.Logins.Include(l => l.LoginRoles).Where(x => x.UserName == username && x.Password == password).FirstOrDefault();
         }
 
         public Login GetLoginByEmpID(long loggedInEmpID)
@@ -37,11 +37,10 @@ namespace MilkTeaManagement.DAL.Repositories
             _context.Logins.Update(login);
             _context.SaveChanges();
         }
-
         public void Delete(Login login)
         {
             _context = new MilkTeaContext();
-            _context.Logins.Remove(login);
+            _context.Logins.Remove(_context.Logins.Find(login.Id));
             _context.SaveChanges();
         }
     }

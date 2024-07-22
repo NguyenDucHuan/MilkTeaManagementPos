@@ -16,7 +16,7 @@
         <Label Content="Address" HorizontalAlignment="Left" Margin="316,211,0,0" VerticalAlignment="Top"/>
         <Label Content="Card" HorizontalAlignment="Left" Margin="316,257,0,0" VerticalAlignment="Top"/>
         <Label Content="DateWork" HorizontalAlignment="Left" Margin="316,296,0,0" VerticalAlignment="Top"/>
-        <Label Content="Image" HorizontalAlignment="Left" Margin="681,138,0,0" VerticalAlignment="Top"/>
+        <Label Content="Image" HorizontalAlignment="Left" Margin="675,138,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.264,1.174"/>
         <DatePicker x:Name="DateWorkDatePicker" HorizontalAlignment="Left" Margin="412,295,0,0" VerticalAlignment="Top" Width="168"/>
         <TextBox x:Name="CardIdTextBox" HorizontalAlignment="Left" Margin="412,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
         <TextBox x:Name="AddressTextBox" HorizontalAlignment="Left" Margin="412,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
@@ -27,6 +27,7 @@
         <Label x:Name="AccountDetailLable" Content="" HorizontalAlignment="Left" Margin="34,32,0,0" VerticalAlignment="Top" Height="46" Width="196"/>
         <Button x:Name="SaveButton" Content="Save Change" HorizontalAlignment="Left" Margin="235,374,0,0" VerticalAlignment="Top" Click="SaveButton_Click"/>
         <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="412,374,0,0" VerticalAlignment="Top" Width="84" Click="QuitButton_Click"/>
-
+        <Image x:Name="EmpImage" HorizontalAlignment="Left" Source="{Binding Login.IdEmployeeNavigation.Img}" Height="125" Margin="631,176,0,0" VerticalAlignment="Top" Width="139" RenderTransformOrigin="-0.998,-0.796" MouseLeftButtonDown="EmpImage_MouseLeftButtonDown"/>
+        <Button x:Name="UpdateImgButton" Content="InsertImg" HorizontalAlignment="Left" Margin="664,312,0,0" VerticalAlignment="Top" Width="103" Click="UpdateImgButton_Click"  />
     </Grid>
 </Window>

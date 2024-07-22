@@ -4,20 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MilkTeaManagementUI"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="BillDetail" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="BillIdTextBox" HorizontalAlignment="Left" Margin="52,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="BillDateTextbox" HorizontalAlignment="Left" Margin="52,81,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TotalMoneyTextbox" HorizontalAlignment="Left" Margin="52,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="UserIdTextbox" HorizontalAlignment="Left" Margin="52,217,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Margin="52,278,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TableIdTextbox" HorizontalAlignment="Left" Margin="280,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="NameTableTextbox" HorizontalAlignment="Left" Margin="280,81,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="505,192,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="505,31,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="505,81,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="505,130,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="120"/>
+        <materialDesign:PackIcon Kind="Worker" Height="50" Width="50" Margin="10"/>
+        <Label FontSize="40" Margin="50,2,20,2">Đang Phát Triển </Label>
 
     </Grid>
 </Window>

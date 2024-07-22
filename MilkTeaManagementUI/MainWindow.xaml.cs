@@ -2,6 +2,7 @@
 using MilkTeaManagement.DAL.Entities;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 
 namespace MilkTeaManagementUI
@@ -26,6 +27,7 @@ namespace MilkTeaManagementUI
         {
             InitializeComponent();
             _tablesByGroupId = new Dictionary<long, List<TbTable>>();
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -71,7 +73,7 @@ namespace MilkTeaManagementUI
             CheckoutOrderButton.Visibility = Visibility.Visible;
             ClearOrderButton.Visibility = Visibility.Visible;
             RefreshTableButton.Visibility = Visibility.Hidden;
-            CancleButton.Visibility = Visibility.Hidden;
+            CancelButton.Visibility = Visibility.Hidden;
         }
         public void LoadTable()
         {
@@ -152,6 +154,7 @@ namespace MilkTeaManagementUI
         private void ClearOrderButton_Click(object sender, RoutedEventArgs e)
         {
             CurBill = null;
+            Application.Current.Properties["CurBill"] = null;
             LoadCurOrder();
             TableChoosedTextBlock.Content = "";
             TotalMoneyTextBlock.Text = "";
@@ -177,7 +180,7 @@ namespace MilkTeaManagementUI
             CheckoutOrderButton.Visibility = Visibility.Visible;
             ClearOrderButton.Visibility = Visibility.Visible;
             RefreshTableButton.Visibility = Visibility.Hidden;
-            CancleButton.Visibility = Visibility.Hidden;
+            CancelButton.Visibility = Visibility.Hidden;
         }
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
@@ -206,6 +209,7 @@ namespace MilkTeaManagementUI
                     TablesOnUse = new();
                     TablesOnUse.Add(_tableService.GetTableList().Where(c => c.Id == CurBill.IdTable).FirstOrDefault());
                 }
+                Application.Current.Properties["CurBill"] = null;
                 CurBill = null;
                 LoadCurOrder();
                 ListViewTable.SelectedItem = null;
@@ -227,7 +231,6 @@ namespace MilkTeaManagementUI
             {
                 CurBill.IdTable = (ListViewTable.SelectedItem as TbTable).Id;
                 CurBill.IdUser = loggedInEmpID;
-                Application.Current.Properties["CurBill"] = CurBill;
                 TableChoosedTextBlock.Content = "Table: " + (ListViewTable.SelectedItem as TbTable).NameTb;
             }
             LoadCurOrder();
@@ -253,16 +256,17 @@ namespace MilkTeaManagementUI
             CheckoutOrderButton.Visibility = Visibility.Hidden;
             ClearOrderButton.Visibility = Visibility.Hidden;
             RefreshTableButton.Visibility = Visibility.Visible;
-            CancleButton.Visibility = Visibility.Visible;
+            CancelButton.Visibility = Visibility.Visible;
         }
-        private void CancleButton_Click(object sender, RoutedEventArgs e)
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             LoadCurOrder();
             TableChoosedTextBlock.Content = "";
+
             CheckoutOrderButton.Visibility = Visibility.Visible;
             ClearOrderButton.Visibility = Visibility.Visible;
             RefreshTableButton.Visibility = Visibility.Hidden;
-            CancleButton.Visibility = Visibility.Hidden;
+            CancelButton.Visibility = Visibility.Hidden;
         }
 
         private void BillsStackPanel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -276,5 +280,12 @@ namespace MilkTeaManagementUI
             AccountManagement accountManagement = new AccountManagement();
             accountManagement.ShowDialog();
         }
+
+        private void ListViewItem_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            ReportWindow reportWindow = new ReportWindow();
+            reportWindow.ShowDialog();
+        }
+
     }
 }

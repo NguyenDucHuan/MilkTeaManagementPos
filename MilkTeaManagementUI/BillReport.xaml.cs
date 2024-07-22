@@ -44,6 +44,12 @@ namespace MilkTeaManagementUI
         }
         private void SearchByDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
+            if(SearchByDatePicker.Text.Length <= 5) 
+            {
+                BillDataGrid.ItemsSource = null;
+                LoadData();
+                return;
+            }
             var date = DateTime.Parse(SearchByDatePicker.Text);
             _billService.GetByDate(date);
             if (date != null)

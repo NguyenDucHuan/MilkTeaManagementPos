@@ -15,7 +15,7 @@ namespace MilkTeaManagement.DAL.Repositories
         public void Delete(long id)
         {
             _context = new();
-            _context.LoginRoles.Remove(_context.LoginRoles.Where(t => t.IdLogin == id).FirstOrDefault());
+            _context.LoginRoles.Remove(_context.LoginRoles.Where(i => i.Id == id).FirstOrDefault());
             _context.SaveChanges();
         }
 
@@ -23,6 +23,15 @@ namespace MilkTeaManagement.DAL.Repositories
         {
             _context = new();
             return _context.LoginRoles.FirstOrDefault(p => p.IdLogin == loginId);
+        }
+
+        public void Update(LoginRole loginRole)
+        {
+            _context = new();
+            var old = _context.LoginRoles.Where(l => l.IdLogin == loginRole.IdLogin).FirstOrDefault();
+            old.IdRole = loginRole.IdRole;
+            _context.Update(old);
+            _context.SaveChanges();
         }
     }
 }

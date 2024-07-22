@@ -13,10 +13,18 @@ namespace MilkTeaManagement.BLL.Services
             _loginRoleRepository.Add(loginRole);
         }
 
-        public void DeleteLoginRole(Login login)
+        public void DeleteLoginRole(long id)
         {
-            _loginRoleRepository.Delete(login.Id);
+            _loginRoleRepository.Delete(id);
         }
 
+        public void UpdateLoginRole(LoginRole loginRole)
+        {
+            _loginRoleRepository.Update(loginRole);
+        }
+        public LoginRole GetLoginRole(long id)
+        {
+            return _loginRoleRepository.GetLoginRoleByLoginId(id);
+        }
     }
 }
