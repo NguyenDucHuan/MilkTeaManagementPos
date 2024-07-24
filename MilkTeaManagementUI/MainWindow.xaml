@@ -39,7 +39,7 @@
                 <TextBlock x:Name="LoginEmpNameTextBox" Text="{Binding EmployeeName}" VerticalAlignment="Center" FontSize="16"/>
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="Black">
                     <StackPanel Width="150">
-                        <Button Content="Settings"/>
+                        <Button x:Name="SettingsButton" Content="Settings" Click="SettingsButton_Click"/>
                         <Button Content="Help"/>
                         <Separator/>
                         <Button x:Name="LogoutButton" Content="Logout" Click="LogoutButton_Click"/>

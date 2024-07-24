@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {}
+    "D:\\Ki_5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {}
   },
   "projects": {
-    "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
+    "D:\\Ki_5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
+        "projectUniqueName": "D:\\Ki_5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
         "projectName": "MilkTeaManagement.DAL",
-        "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
-        "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
-        "outputPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\obj\\",
+        "projectPath": "D:\\Ki_5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
+        "packagesPath": "C:\\Users\\minht\\.nuget\\packages\\",
+        "outputPath": "D:\\Ki_5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\subih\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\minht\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
