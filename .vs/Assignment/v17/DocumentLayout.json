@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\courseware\\semester-5\\prn212\\assignment\\prn212_assignmentproject\\milkteamanagementui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\courseware\\semester-5\\prn212\\assignment\\prn212_assignmentproject\\milkteamanagementui\\billdetail.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\billdetail.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\courseware\\semester-5\\prn212\\assignment\\prn212_assignmentproject\\milkteamanagementui\\accountmanagement.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|solutionrelative:milkteamanagementui\\accountmanagement.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|d:\\courseware\\semester-5\\prn212\\assignment\\prn212_assignmentproject\\milkteamanagement.dal\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCD61363-390B-456B-8093-E61AAD47F56C}|MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj|solutionrelative:milkteamanagement.dal\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{734D58E4-C60C-4B94-BEAC-F5E981353980}|MilkTeaManagementUI\\MilkTeaManagementUI.csproj|d:\\courseware\\semester-5\\prn212\\assignment\\prn212_assignmentproject\\milkteamanagementui\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -110,66 +110,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "MilkTeaManagementUI\\LoginWindow.xaml",
-              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\LoginWindow.xaml",
-              "RelativeToolTip": "MilkTeaManagementUI\\LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-22T07:50:16.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TbTable.cs",
-              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbTable.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\TbTable.cs",
-              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbTable.cs",
-              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\TbTable.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T07:38:22.983Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoginRole.cs",
-              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
-              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
-              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T07:37:46.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Login.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\Login.cs",
-              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Login.cs",
-              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\Login.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAswAsAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T05:02:44.418Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Employee.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\Employee.cs",
-              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Employee.cs",
-              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\Employee.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T05:02:38.118Z"
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\appsettings.json",
+              "RelativeDocumentMoniker": "MilkTeaManagementUI\\appsettings.json",
+              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\appsettings.json",
+              "RelativeToolTip": "MilkTeaManagementUI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-24T18:01:59.832Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -196,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BillDetail.xaml.cs",
               "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\BillDetail.xaml.cs",
               "RelativeDocumentMoniker": "MilkTeaManagementUI\\BillDetail.xaml.cs",
@@ -204,12 +158,11 @@
               "RelativeToolTip": "MilkTeaManagementUI\\BillDetail.xaml.cs",
               "ViewState": "AQIAABsAAAAAAAAAAIAwwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T03:54:53.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T03:54:53.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "BillDetail.xaml",
               "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\BillDetail.xaml",
               "RelativeDocumentMoniker": "MilkTeaManagementUI\\BillDetail.xaml",
@@ -218,6 +171,65 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-07-22T03:38:28.011Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\Employee.cs",
+              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Employee.cs",
+              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\Employee.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T05:02:38.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Login.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\Login.cs",
+              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\Login.cs",
+              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\Login.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAswAsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T05:02:44.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginRole.cs",
+              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
+              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
+              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\LoginRole.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T07:37:46.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TbTable.cs",
+              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbTable.cs",
+              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Entities\\TbTable.cs",
+              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Entities\\TbTable.cs",
+              "RelativeToolTip": "MilkTeaManagement.DAL\\Entities\\TbTable.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T07:38:22.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "MilkTeaManagementUI\\LoginWindow.xaml",
+              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\LoginWindow.xaml",
+              "RelativeToolTip": "MilkTeaManagementUI\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-22T07:50:16.918Z"
             },
             {
               "$type": "Document",
@@ -352,18 +364,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginRepository.cs",
-              "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Repositories\\LoginRepository.cs",
-              "RelativeDocumentMoniker": "MilkTeaManagement.DAL\\Repositories\\LoginRepository.cs",
-              "ToolTip": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\Repositories\\LoginRepository.cs",
-              "RelativeToolTip": "MilkTeaManagement.DAL\\Repositories\\LoginRepository.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAkwAwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T22:47:47.834Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 24,
               "Title": "AccountManagement.xaml.cs",
               "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AccountManagement.xaml.cs",
@@ -399,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AccountManagement.xaml",
               "DocumentMoniker": "D:\\Courseware\\Semester-5\\PRN212\\Assignment\\PRN212_AssignmentProject\\MilkTeaManagementUI\\AccountManagement.xaml",
               "RelativeDocumentMoniker": "MilkTeaManagementUI\\AccountManagement.xaml",
