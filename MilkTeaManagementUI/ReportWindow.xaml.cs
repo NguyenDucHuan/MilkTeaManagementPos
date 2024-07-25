@@ -47,7 +47,7 @@ namespace MilkTeaManagementUI
                 string dateEnd = DateTime.Now.AddDays(-7 * i).ToString("dd/MM");
                 labels.Add($"{dateStart}-{dateEnd}");
             }
-
+            labels.Reverse();
             Labels = labels.ToArray();
             Formatter = value => value.ToString("N");
             DataContext = this;
