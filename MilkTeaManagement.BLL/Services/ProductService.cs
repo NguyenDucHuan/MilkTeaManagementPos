@@ -14,5 +14,10 @@ namespace MilkTeaManagement.BLL.Services
         {
             _productRepository.Add(product);
         }
+
+        public void UpdateProduct(TbProduct product)
+        {
+            _productRepository.Update(product);
+        }
     }
 }

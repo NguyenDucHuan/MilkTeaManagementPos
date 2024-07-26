@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj": {}
+    "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj": {}
   },
   "projects": {
-    "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj": {
+    "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
+        "projectUniqueName": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
         "projectName": "MilkTeaManagement.BLL",
-        "projectPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\obj\\",
+        "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj",
+        "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
+        "outputPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\subih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
-                "projectPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj"
+              "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
+                "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj"
               }
             }
           }
@@ -65,21 +69,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
+    "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
+        "projectUniqueName": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
         "projectName": "MilkTeaManagement.DAL",
-        "projectPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\obj\\",
+        "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\MilkTeaManagement.DAL.csproj",
+        "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
+        "outputPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\subih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,21 +164,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj": {
+    "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj",
+        "projectUniqueName": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj",
         "projectName": "MilkTeaManagementUI",
-        "projectPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagementUI\\obj\\",
+        "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\MilkTeaManagementUI.csproj",
+        "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
+        "outputPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagementUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\subih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -185,8 +197,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj": {
-                "projectPath": "D:\\Courseware\\Semester-5\\PRN212\\AssignmentV2\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj"
+              "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj": {
+                "projectPath": "D:\\TERM5\\PRN212\\PRN212_AssignmentProject\\MilkTeaManagement.BLL\\MilkTeaManagement.BLL.csproj"
               }
             }
           }
@@ -238,7 +250,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -18,5 +18,12 @@ namespace MilkTeaManagement.DAL.Repositories
             _context = new MilkTeaContext();
             return _context.TbProducts.Include(t => t.IdGroupProductNavigation).ToList();
         }
+
+        public void Update(TbProduct product)
+        {
+            _context = new MilkTeaContext();
+            _context.TbProducts.Update(product);
+            _context.SaveChanges();
+        }
     }
 }

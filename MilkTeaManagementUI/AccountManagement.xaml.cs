@@ -26,7 +26,7 @@ namespace MilkTeaManagementUI
         private void LoadData()
         {
             AccountDataGrid.ItemsSource = null;
-            AccountDataGrid.ItemsSource = _loginServices.GetAllAccount();
+            AccountDataGrid.ItemsSource = _loginServices.GetAllAccount().Where(i => i.LoginRoles.FirstOrDefault().IdRole != 1).ToList();
         }
 
         private void QuitButton_Click(object sender, RoutedEventArgs e)

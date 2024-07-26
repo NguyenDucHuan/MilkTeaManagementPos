@@ -9,26 +9,22 @@
     <Grid Margin="0,0,0,15">
 
         <Rectangle HorizontalAlignment="Center" Height="321" Margin="0,49,0,0" Stroke="Black" Fill="#c7b49e" VerticalAlignment="Top" RadiusX="10" RadiusY="10" Width="582"/>
-
-
-
         <Label Content="INFORMATION" Margin="317,53,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="DemiBold" RenderTransformOrigin="0.036,3.884" Height="40" HorizontalAlignment="Left"/>
         <Label Content="Product Name" HorizontalAlignment="Left" Margin="150,99,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="DemiBold"/>
         <Label Content="Unit" HorizontalAlignment="Left" Margin="149,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.577,-0.433" FontWeight="DemiBold" FontSize="16"/>
         <Label Content="Price" HorizontalAlignment="Left" Margin="148,152,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="DemiBold"/>
         <Label Content="Describe" HorizontalAlignment="Left" Margin="147,181,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="DemiBold"/>
         <Label Content="Product Type" HorizontalAlignment="Left" Margin="147,209,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="DemiBold"/>
-        <ComboBox x:Name="ProductGroupComboBox" HorizontalAlignment="Left" Margin="268,203,0,0" VerticalAlignment="Top" Width="330" FontWeight="DemiBold"/>
-        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="268,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390"/>
-        <TextBox x:Name="PriceTextBox" HorizontalAlignment="Left" Margin="267,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="28"/>
-        <TextBox x:Name="UnitTextBox" HorizontalAlignment="Left" Margin="268,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="29"/>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="268,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="29"/>
+        <ComboBox x:Name="ProductGroupComboBox" HorizontalAlignment="Left" Margin="268,203,0,0" VerticalAlignment="Top" Width="330" FontWeight="DemiBold" />
+        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="268,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Text="{Binding Description}"/>
+        <TextBox x:Name="PriceTextBox" HorizontalAlignment="Left" Margin="267,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="28" Text="{Binding UnitPrice}"/>
+        <TextBox x:Name="UnitTextBox" HorizontalAlignment="Left" Margin="268,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="29" Text="{Binding Unit}"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="268,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="29" Text="{Binding Name}" />
         <Button x:Name="AddProductButton" Content="Add Product" HorizontalAlignment="Left" Margin="563,324,0,0" VerticalAlignment="Top"  Background="#f8c26b" Foreground="Black" FontWeight="DemiBold" Click="AddProductButton_Click" Width="113"/>
         <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="563,287,0,0" VerticalAlignment="Top" Width="113" RenderTransformOrigin="0.477,0.783" Background="#f8c26b" Foreground="Black" FontWeight="DemiBold" Click="CancelButton_Click"/>
-        <Button x:Name="AddProductGroupButton" Content="+" HorizontalAlignment="Left" Margin="614,210,0,0" VerticalAlignment="Top" Click="AddProductGroupButton_Click" Background="#f8c26b" Foreground="Black" FontWeight="ExtraBold" RenderTransformOrigin="0.368,0.595" Height="20" Width="40"/>
+        <Button x:Name="AddProductGroupButton" Content="+" HorizontalAlignment="Left" Margin="614,210,0,0" VerticalAlignment="Top" Click="AddProductGroupButton_Click" Background="#f8c26b" Foreground="Black" FontWeight="ExtraBold" RenderTransformOrigin="0.368,0.595" Height="26" Width="44"/>
         <Label Content="Product IMG" HorizontalAlignment="Left" Margin="148,244,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="DemiBold"/>
         <Button x:Name="UpdateImageButton" Content="Update Image" HorizontalAlignment="Left" Margin="563,247,0,0" VerticalAlignment="Top" Width="113" FontSize="11" RenderTransformOrigin="0.477,0.783" Background="#f8c26b" Foreground="Black" FontWeight="DemiBold" Click="UpdateImageButton_Click"/>
-        <Image x:Name="ProductImage" HorizontalAlignment="Left" Height="102" Margin="273,248,0,0" VerticalAlignment="Top" Width="139"/>
-
+        <Image x:Name="ProductImage" HorizontalAlignment="Left" Height="102" Margin="273,248,0,0" VerticalAlignment="Top" Width="139" Source="{Binding Img}"/>
     </Grid>
 </Window>
