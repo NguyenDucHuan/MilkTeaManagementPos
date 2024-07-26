@@ -8,31 +8,37 @@
         mc:Ignorable="d"
         Title="BillDetail" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <Label Content="Bill Detail" FontSize="50" HorizontalAlignment="Left" Margin="295,11,0,0" VerticalAlignment="Top" Height="65" Width="217" RenderTransformOrigin="0.407,0.56"/>
+        <Label Content="Bill" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="155" FontSize="20" Grid.Row="0"/>
 
-        <TextBlock Text="Bill ID:" HorizontalAlignment="Left" Margin="84,90,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="BillIdTextBox"  Text="{Binding Id}"  HorizontalAlignment="Left" Margin="164,82,0,0" Width="200" VerticalAlignment="Top" IsReadOnly="True" />
+        <DataGrid x:Name="BillDetailDataGrid" Margin="10,4,10,46" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill ID" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Bill Date" Binding="{Binding BillDate, StringFormat={}{0:MM/dd/yyyy hh:mm:ss tt}}" Width="*"/>
+                <DataGridTextColumn Header="Total Money" Binding="{Binding TotalMoney}" Width="*"/>
+                <DataGridTextColumn Header="User ID" Binding="{Binding IdUser}" Width="*"/>
+                <DataGridTextColumn Header="Username" Binding="{Binding IdUserNavigation.UserName}" Width="*"/>
+                <DataGridTextColumn Header="Table ID" Binding="{Binding IdTable}" Width="*"/>
+                <DataGridTextColumn Header="Table Name" Binding="{Binding IdTableNavigation.NameTb}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
-        <TextBlock Text="Bill Date:" HorizontalAlignment="Left" Margin="84,138,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="BillDateTextbox" Text="{Binding BillDate}" HorizontalAlignment="Left" Margin="166,132,0,0" Width="200" VerticalAlignment="Top" IsReadOnly="True"/>
+        <Label Content="Bill Detail" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Height="30" Width="155" FontSize="20" Grid.Row="2"/>
 
-        <TextBlock Text="Total Money:" HorizontalAlignment="Left" Margin="84,188,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TotalMoneyTextbox" Text="{Binding TotalMoney}" HorizontalAlignment="Left" Margin="168,182,0,0" Width="200" VerticalAlignment="Top" IsReadOnly="True"/>
-
-        <TextBlock Text="User ID:" HorizontalAlignment="Left" Margin="84,239,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="UserIdTextbox" Text="{Binding IdUser}"  HorizontalAlignment="Left" Margin="166,231,0,0" Width="200" VerticalAlignment="Top" IsReadOnly="True"/>
-
-        <TextBlock Text="Username:" HorizontalAlignment="Left" Margin="84,285,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="UsernameTextbox" Text="{Binding IdUserNavigation.UserName}" HorizontalAlignment="Left" Margin="166,281,0,0" Width="200" VerticalAlignment="Top" IsReadOnly="True" />
-
-        <TextBlock Text="Table ID:" HorizontalAlignment="Left" Margin="84,330,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TableIdTextbox" Text="{Binding IdTable}" HorizontalAlignment="Left" Margin="166,324,0,0" Width="200" VerticalAlignment="Top" IsReadOnly="True"/>
-
-        <TextBlock Text="Table Name:" HorizontalAlignment="Left" Margin="86,376,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="NameTableTextbox" Text="{Binding IdTableNavigation.NameTb}" HorizontalAlignment="Left" Margin="168,370,0,0" Width="200" VerticalAlignment="Top" IsReadOnly="True"/>
-
-
-
+        <DataGrid x:Name="BillDetailsDataGrid" Margin="10,48,10,12" AutoGenerateColumns="False" Grid.Row="2" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill Detail ID" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Product ID" Binding="{Binding IdProduct}" Width="*"/>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding IdProductNavigation.Name}" Width="*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="*"/>
+                <DataGridTextColumn Header="Unit Price" Binding="{Binding UnitPrice, StringFormat={}{0:C}}" Width="*"/>
+                <DataGridTextColumn Header="Into Money" Binding="{Binding IntoMoney, StringFormat={}{0:C}}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
