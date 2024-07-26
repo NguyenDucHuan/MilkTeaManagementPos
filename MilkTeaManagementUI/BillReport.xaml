@@ -7,8 +7,13 @@
         mc:Ignorable="d"
         Title="BillReport" Height="800" Width="1400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="367*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="973*"/>
+        </Grid.ColumnDefinitions>
         <Label Content="Bill Report" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="46" Width="155" FontSize="25"/>
-        <DataGrid x:Name="BillDataGrid" Margin="30,132,22,28"  AutoGenerateColumns="False" >
+        <DataGrid x:Name="BillDataGrid" Margin="30,132,22,28"  AutoGenerateColumns="False" Grid.ColumnSpan="3" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Bill ID" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Bill Date" Binding="{Binding BillDate}"/>
@@ -18,8 +23,8 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button x:Name="ViewDetailButton" Content="View Detail" HorizontalAlignment="Left" Margin="1274,33,0,0" VerticalAlignment="Top" Click="ViewDetailButton_Click"/>
-        <DatePicker x:Name="SearchByDatePicker" HorizontalAlignment="Left" Margin="1172,93,0,0" VerticalAlignment="Top" Width="206" SelectedDateChanged="SearchByDatePicker_SelectedDateChanged"/>
+        <Button x:Name="ViewDetailButton" Content="View Detail" HorizontalAlignment="Left" Margin="847,33,0,0" VerticalAlignment="Top" Click="ViewDetailButton_Click" Grid.Column="2"/>
+        <DatePicker x:Name="SearchByDatePicker" HorizontalAlignment="Left" Margin="745,93,0,0" VerticalAlignment="Top" Width="206" SelectedDateChanged="SearchByDatePicker_SelectedDateChanged" Grid.Column="2"/>
 
     </Grid>
 </Window>

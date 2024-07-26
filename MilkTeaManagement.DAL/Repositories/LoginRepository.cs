@@ -22,7 +22,7 @@ namespace MilkTeaManagement.DAL.Repositories
         public List<Login> GetAll()
         {
             _context = new MilkTeaContext();
-            return _context.Logins.Where(predicate: x => x.Id != 1).Include(l => l.LoginRoles).Include(e => e.IdEmployeeNavigation).ToList();
+            return _context.Logins.Include(l => l.LoginRoles).Include(e => e.IdEmployeeNavigation).ToList();
         }
         public void Add(Login login)
         {

@@ -18,12 +18,19 @@ namespace MilkTeaManagement.BLL.Services
             var bills = _repo.GetAll();
             return bills.Where(t => t.IdTable == tableID).ToList().OrderByDescending(p => p.BillDate).FirstOrDefault();
         }
-
+        public List<TbBillDetailt> GetBillDetailsByBillId(long billId)
+        {
+            return _repo.GetBillDetailsByBillId(billId);
+        }
         public List<TbBill> GetAllBills()
         {
             return _repo.GetAll();
         }
 
+        public TbBill GetBill(long id)
+        {
+            return _repo.GetById(id);
+        }
         public List<TbBill> GetByDate(DateTime dateTime)
         {
             return _repo.GetByDate(dateTime);

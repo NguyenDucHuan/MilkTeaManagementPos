@@ -6,10 +6,39 @@
         xmlns:local="clr-namespace:MilkTeaManagementUI"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="BillDetail" Height="450" Width="800">
+        Title="BillDetail" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
-        <materialDesign:PackIcon Kind="Worker" Height="50" Width="50" Margin="10"/>
-        <Label FontSize="40" Margin="50,2,20,2">Đang Phát Triển </Label>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <Label Content="Bill" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="155" FontSize="20" Grid.Row="0"/>
+
+        <DataGrid x:Name="BillDetailDataGrid" Margin="10,4,10,46" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill ID" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Bill Date" Binding="{Binding BillDate, StringFormat={}{0:MM/dd/yyyy hh:mm:ss tt}}" Width="*"/>
+                <DataGridTextColumn Header="Total Money" Binding="{Binding TotalMoney}" Width="*"/>
+                <DataGridTextColumn Header="User ID" Binding="{Binding IdUser}" Width="*"/>
+                <DataGridTextColumn Header="Username" Binding="{Binding IdUserNavigation.UserName}" Width="*"/>
+                <DataGridTextColumn Header="Table ID" Binding="{Binding IdTable}" Width="*"/>
+                <DataGridTextColumn Header="Table Name" Binding="{Binding IdTableNavigation.NameTb}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Bill Detail" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Height="30" Width="155" FontSize="20" Grid.Row="2"/>
+
+        <DataGrid x:Name="BillDetailsDataGrid" Margin="10,48,10,12" AutoGenerateColumns="False" Grid.Row="2" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill Detail ID" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Product ID" Binding="{Binding IdProduct}" Width="*"/>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding IdProductNavigation.Name}" Width="*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="*"/>
+                <DataGridTextColumn Header="Unit Price" Binding="{Binding UnitPrice, StringFormat={}{0:C}}" Width="*"/>
+                <DataGridTextColumn Header="Into Money" Binding="{Binding IntoMoney, StringFormat={}{0:C}}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

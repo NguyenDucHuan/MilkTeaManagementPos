@@ -5,15 +5,10 @@ namespace MilkTeaManagement.BLL.Services
 {
     public class ProductService
     {
-        private IGenericRepository<TbProduct> _genericRepository = null;
         private ProductRepository _productRepository = new ProductRepository();
-        public ProductService()
-        {
-            this._genericRepository = new GenericRepository<TbProduct>();
-        }
         public List<TbProduct> GetAllProductList()
         {
-            return (List<TbProduct>)_genericRepository.GetAll();
+            return _productRepository.GetAll();
         }
         public void AddProduct(TbProduct product)
         {

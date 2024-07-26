@@ -41,20 +41,28 @@ namespace MilkTeaManagementUI
         public void LoadMenu()
         {
             ListViewProduct.ItemsSource = null;
+            ProductDataGrid.ItemsSource = null;
             _productService = new ProductService();
             var products = _productService.GetAllProductList();
             DataContext = this;
             ListViewProduct.ItemsSource = products;
+            ProductDataGrid.ItemsSource = products;
         }
         public void LoadLoginUser()
         {
             _employeeService = new EmployeeService();
             long loggedInEmpID = (long)Application.Current.Properties["LoggedInEmpID"];
-            var loginrole = _loginServices.GetLoginByEmpID(loggedInEmpID).LoginRoles.FirstOrDefault().IdLogin;
+            var loginrole = _loginServices.GetLoginByEmpID(loggedInEmpID).LoginRoles.FirstOrDefault().IdRole;
             var loginEmp = _employeeService.GetLoginEmployee(loggedInEmpID);
             if (loginrole != 1)
             {
                 GridMenu.Visibility = Visibility.Hidden;
+                ProductBorder.Visibility = Visibility.Visible;
+                TableBorder.Visibility = Visibility.Visible;
+                TableOnUseBorder.Visibility = Visibility.Visible;
+                OrderBorder.Visibility = Visibility.Visible;
+                ActionBorder.Visibility = Visibility.Visible;
+                ManagerPrductListBorder.Visibility = Visibility.Hidden;
             }
             LoginEmpNameTextBox.Text = loginEmp.FullName;
         }
@@ -286,6 +294,10 @@ namespace MilkTeaManagementUI
             ReportWindow reportWindow = new ReportWindow();
             reportWindow.ShowDialog();
         }
-
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.ShowDialog();
+        }
     }
 }

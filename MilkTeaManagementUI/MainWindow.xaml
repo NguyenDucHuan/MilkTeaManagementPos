@@ -39,7 +39,7 @@
                 <TextBlock x:Name="LoginEmpNameTextBox" Text="{Binding EmployeeName}" VerticalAlignment="Center" FontSize="16"/>
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="Black">
                     <StackPanel Width="150">
-                        <Button Content="Settings"/>
+                        <Button x:Name="SettingsButton" Content="Settings" Click="SettingsButton_Click"/>
                         <Button Content="Help"/>
                         <Separator/>
                         <Button x:Name="LogoutButton" Content="Logout" Click="LogoutButton_Click"/>
@@ -55,7 +55,7 @@
                     <ColumnDefinition Width="515*"/>
                     <ColumnDefinition Width="434*"/>
                 </Grid.ColumnDefinitions>
-                <Border Background="#fffcf8" HorizontalAlignment="Center" Width="566" Grid.ColumnSpan="2" Margin="0,0,0,289">
+                <Border x:Name="ProductBorder" Background="#fffcf8" HorizontalAlignment="Center" Width="566" Grid.ColumnSpan="2" Margin="0,0,0,289" Visibility="Hidden">
                     <StackPanel HorizontalAlignment="Center" Width="522">
                         <TextBlock Text="PRODUCT" FontSize="18" Foreground="Black" FontWeight="DemiBold"/>
                         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="360">
@@ -86,9 +86,7 @@
                         </ScrollViewer>
                     </StackPanel>
                 </Border>
-
-
-                <Border Background="#fffcf8" Margin="26,408,321,21" Padding="10" Grid.ColumnSpan="2">
+                <Border x:Name="TableBorder" Background="#fffcf8" Margin="26,408,321,21" Padding="10" Grid.ColumnSpan="2" Visibility="Hidden">
 
                     <StackPanel Margin="0,0,0,27">
                         <!--Tạo list nút lấy từ _tableGroupService.GetTableGroupList -->
@@ -118,7 +116,7 @@
                         </ScrollViewer>
                     </StackPanel>
                 </Border>
-                <Border Background="#fffcf8" Margin="239,408,25,22" Padding="10" Grid.Column="1">
+                <Border x:Name="TableOnUseBorder" Background="#fffcf8" Margin="239,408,25,22" Padding="10" Grid.Column="1" Visibility="Hidden">
 
                     <StackPanel Margin="0,0,0,27">
                         <!--Tạo list nút lấy từ _tableGroupService.GetTableGroupList -->
@@ -149,7 +147,7 @@
                     </StackPanel>
                 </Border>
                 <!-- Order List -->
-                <Border Grid.Column="2" Background="#fffcf8" Margin="10,0,10,235" Padding="10">
+                <Border x:Name="OrderBorder" Grid.Column="2" Background="#fffcf8" Margin="10,0,10,235" Padding="10" Visibility="Hidden">
                     <StackPanel>
                         <Label x:Name="TableChoosedTextBlock" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 10"/>
                         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
@@ -167,7 +165,7 @@
 
                     </StackPanel>
                 </Border>
-                <Border Grid.Column="2" Margin="11,462,11,90" Background="#fffcf8" RenderTransformOrigin="0.5,0.5">
+                <Border x:Name="ActionBorder" Grid.Column="2" Margin="11,462,11,90" Background="#fffcf8" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
                     <Grid Margin="4,7,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -183,6 +181,20 @@
                             <Button x:Name="CancelButton" Content="Cancle"  Width="130" Height="26"  Margin="10,2,15,1" Background="#f8c26b" Foreground="Black" Visibility="Hidden" Click="CancelButton_Click"/>
                         </StackPanel>
                     </Grid>
+                </Border>
+                <Border x:Name="ManagerPrductListBorder" BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="668" Margin="9,0,0,0" VerticalAlignment="Center" Width="1056">
+                    <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="549" Margin="21,24,0,0" VerticalAlignment="Top" Width="994" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Unit" Binding="{Binding Unit}"/>
+                            <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice , StringFormat={}{0:N0} VND}"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Group" Binding="{Binding IdGroupProductNavigation.NameGr}"/>
+                        </DataGrid.Columns>
+                        
+                    </DataGrid>
+
                 </Border>
             </Grid>
 
