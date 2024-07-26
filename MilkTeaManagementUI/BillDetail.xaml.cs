@@ -23,7 +23,8 @@ namespace MilkTeaManagementUI
                 TbBill bill = _billService.GetBill(Bill.Id);
                 if (bill != null)
                 {
-                    DataContext = bill;
+                    BillDetailDataGrid.ItemsSource = new List<TbBill> { bill };
+                    BillDetailsDataGrid.ItemsSource = _billService.GetBillDetailsByBillId(Bill.Id);
                 }
                 else
                 {

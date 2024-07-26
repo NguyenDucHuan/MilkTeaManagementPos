@@ -41,7 +41,13 @@ namespace MilkTeaManagement.DAL.Repositories
                 .Include(b => b.IdUserNavigation)
                 .ToList();
         }
-
+        public List<TbBillDetailt> GetBillDetailsByBillId(long billId)
+        {
+            return _context.TbBillDetailts
+                .Where(detail => detail.IdBill == billId)
+                .Include(detail => detail.IdProductNavigation)
+                .ToList();
+        }
         public List<TbBill> GetByDate(DateTime dateTime)
         {
             _context = new MilkTeaContext();
