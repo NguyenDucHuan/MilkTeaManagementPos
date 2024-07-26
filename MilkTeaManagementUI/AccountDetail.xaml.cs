@@ -113,14 +113,13 @@ namespace MilkTeaManagementUI
             {
                 UserNameTextBox.Text = Login.UserName;
                 PasswordTextBox.Text = Login.Password;
-                LoginRolesComboBox.SelectedIndex = Login.LoginRoles.FirstOrDefault().IdRole;
+                LoginRolesComboBox.SelectedValue = Login.LoginRoles.FirstOrDefault().IdRole;
                 NameTextBox.Text = Login.IdEmployeeNavigation.FullName;
                 AddressTextBox.Text = Login.IdEmployeeNavigation.Address;
                 PhoneTextBox.Text = Login.IdEmployeeNavigation.PhoneNumber;
                 CardIdTextBox.Text = Login.IdEmployeeNavigation.IdCard;
                 DateWorkDatePicker.SelectedDate = DateTime.Now;
                 Img = Login.IdEmployeeNavigation.Img;
-
                 DataContext = this;
             }
         }

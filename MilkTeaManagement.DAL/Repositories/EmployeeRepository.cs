@@ -1,4 +1,5 @@
-﻿using MilkTeaManagement.DAL.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MilkTeaManagement.DAL.Entities;
 
 namespace MilkTeaManagement.DAL.Repositories
 {
@@ -9,7 +10,7 @@ namespace MilkTeaManagement.DAL.Repositories
         public List<Employee> GetAll()
         {
             _context = new MilkTeaContext();
-            return _context.Employees.ToList();
+            return _context.Employees.Include(i => i.Logins).ToList();
         }
         public void Add(Employee employee)
         {

@@ -68,7 +68,6 @@ namespace MilkTeaManagement.BLL.Services
 
                 otm.Add(weeklyTotal);
             }
-            
             otm.Reverse();
             return otm;
         }

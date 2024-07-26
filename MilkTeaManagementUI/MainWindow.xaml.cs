@@ -238,7 +238,7 @@ namespace MilkTeaManagementUI
             if (ListViewTable.SelectedItem != null)
             {
                 CurBill.IdTable = (ListViewTable.SelectedItem as TbTable).Id;
-                CurBill.IdUser = loggedInEmpID;
+                CurBill.IdUser = _employeeService.GetEmployeeById(loggedInEmpID).Logins.FirstOrDefault().Id;
                 TableChoosedTextBlock.Content = "Table: " + (ListViewTable.SelectedItem as TbTable).NameTb;
             }
             LoadCurOrder();
@@ -298,6 +298,23 @@ namespace MilkTeaManagementUI
         {
             SettingsWindow settingsWindow = new SettingsWindow();
             settingsWindow.ShowDialog();
+        }
+
+        private void UpdateProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            TbProduct? product = ProductDataGrid.SelectedItem as TbProduct;
+            if (product != null)
+            {
+                AddProduct addProduct = new AddProduct();
+                addProduct.Product = product;
+                addProduct.ShowDialog();
+                ProductDataGrid.SelectedItem = null;
+                LoadMenu();
+            }
+            else
+            {
+                MessageBox.Show("Please select a product to view detail!!");
+            }
         }
     }
 }

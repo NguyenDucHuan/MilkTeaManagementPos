@@ -183,17 +183,21 @@
                     </Grid>
                 </Border>
                 <Border x:Name="ManagerPrductListBorder" BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="668" Margin="9,0,0,0" VerticalAlignment="Center" Width="1056">
-                    <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="549" Margin="21,24,0,0" VerticalAlignment="Top" Width="994" AutoGenerateColumns="False">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
-                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="Unit" Binding="{Binding Unit}"/>
-                            <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice , StringFormat={}{0:N0} VND}"/>
-                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
-                            <DataGridTextColumn Header="Group" Binding="{Binding IdGroupProductNavigation.NameGr}"/>
-                        </DataGrid.Columns>
-                        
-                    </DataGrid>
+                    <StackPanel>
+                        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="549" Margin="21,24,0,0" VerticalAlignment="Top" Width="994" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                                <DataGridTextColumn Header="Unit" Binding="{Binding Unit}"/>
+                                <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice , StringFormat={}{0:N0} VND}"/>
+                                <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                                <DataGridTextColumn Header="Group" Binding="{Binding IdGroupProductNavigation.NameGr}"/>
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+                        <Button x:Name="UpdateProductButton" Content="UpdateProduct"  Height="40"  Width="202" Click="UpdateProductButton_Click"/>
+                    </StackPanel>
+
 
                 </Border>
             </Grid>
