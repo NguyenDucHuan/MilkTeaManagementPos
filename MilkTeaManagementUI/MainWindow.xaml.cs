@@ -43,7 +43,7 @@ namespace MilkTeaManagementUI
             ListViewProduct.ItemsSource = null;
             ProductDataGrid.ItemsSource = null;
             _productService = new ProductService();
-            var products = _productService.GetAllProductList();
+            List<TbProduct> products = _productService.GetAllProductList();
             DataContext = this;
             ListViewProduct.ItemsSource = products;
             ProductDataGrid.ItemsSource = products;
@@ -128,7 +128,6 @@ namespace MilkTeaManagementUI
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();
-            Application.Current.Shutdown();
         }
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {

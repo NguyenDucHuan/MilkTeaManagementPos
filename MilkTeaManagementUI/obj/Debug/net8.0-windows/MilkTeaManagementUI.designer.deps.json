@@ -40,6 +40,26 @@
           }
         }
       },
+      "Emoji.Wpf/0.3.4": {
+        "dependencies": {
+          "JeremyAnsel.HLSL.Targets": "1.0.13",
+          "Stfu": "0.1.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Emoji.Wpf.dll": {
+            "assemblyVersion": "0.3.4.0",
+            "fileVersion": "0.3.4.0"
+          },
+          "lib/netcoreapp3.1/Typography.GlyphLayout.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netcoreapp3.1/Typography.OpenFont.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "HandyControls/3.5.3": {
         "runtime": {
           "lib/net8.0/HandyControl.dll": {
@@ -48,6 +68,7 @@
           }
         }
       },
+      "JeremyAnsel.HLSL.Targets/1.0.13": {},
       "LiveCharts/0.9.7": {
         "runtime": {
           "lib/net45/LiveCharts.dll": {
@@ -566,6 +587,14 @@
           }
         }
       },
+      "Stfu/0.1.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/Stfu.dll": {
+            "assemblyVersion": "0.1.1.0",
+            "fileVersion": "0.1.1.0"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/6.0.1": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "6.0.0",
@@ -876,12 +905,26 @@
       "path": "azure.identity/1.10.3",
       "hashPath": "azure.identity.1.10.3.nupkg.sha512"
     },
+    "Emoji.Wpf/0.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3ouEfw6Mo5Czk0TJd4BWrElB21jK9lKWqB1ZZF1DEBDRLNmOvJJbT51/ELLMIyqyn4p/mh10XC9Kmqmb1IbmnQ==",
+      "path": "emoji.wpf/0.3.4",
+      "hashPath": "emoji.wpf.0.3.4.nupkg.sha512"
+    },
     "HandyControls/3.5.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-VZ38Re5I8T7WJPLTMamMyGvcVs442FKY/P7XEkDl8vh5eEz/dKE0I0/r5p/Kmyip8rIA0td89Fh8WdYe/RfBLw==",
       "path": "handycontrols/3.5.3",
       "hashPath": "handycontrols.3.5.3.nupkg.sha512"
+    },
+    "JeremyAnsel.HLSL.Targets/1.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uLfE1STTM/o8G2eWEtQWMHm91nO47BIEsjXhO3c6hvsjx+bInTA7LnqI9iAWUWr58Sug+NSoNNZT83i2mWMl7g==",
+      "path": "jeremyansel.hlsl.targets/1.0.13",
+      "hashPath": "jeremyansel.hlsl.targets.1.0.13.nupkg.sha512"
     },
     "LiveCharts/0.9.7": {
       "type": "package",
@@ -1183,6 +1226,13 @@
       "sha512": "sha512-8PZKqw9QOcu42xk8puY4P1+EXHL9YGOR9b7qhaYx5cILHul456H073tj99vyPcCt0W0781T9RwHqkx507ZyUpQ==",
       "path": "microsoft.xaml.behaviors.wpf/1.1.39",
       "hashPath": "microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+    },
+    "Stfu/0.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wUd0joqQoZ1B/wULKx1gGTY9zxiDbsW3Y6W0G0guCTL/jRMdDBPr9FMHfkoOKB0JIYGlup3NqXrsqs8fPrCdrw==",
+      "path": "stfu/0.1.1",
+      "hashPath": "stfu.0.1.1.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/6.0.1": {
       "type": "package",
