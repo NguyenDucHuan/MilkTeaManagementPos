@@ -21,6 +21,7 @@
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\subih\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.39</PkgMicrosoft_Xaml_Behaviors_Wpf>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\subih\.nuget\packages\materialdesignthemes\5.1.0</PkgMaterialDesignThemes>
     <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\subih\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
+    <PkgJeremyAnsel_HLSL_Targets Condition=" '$(PkgJeremyAnsel_HLSL_Targets)' == '' ">C:\Users\subih\.nuget\packages\jeremyansel.hlsl.targets\1.0.13</PkgJeremyAnsel_HLSL_Targets>
     <PkgHandyControls Condition=" '$(PkgHandyControls)' == '' ">C:\Users\subih\.nuget\packages\handycontrols\3.5.3</PkgHandyControls>
   </PropertyGroup>
 </Project>

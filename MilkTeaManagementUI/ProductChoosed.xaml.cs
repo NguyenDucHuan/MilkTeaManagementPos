@@ -1,5 +1,7 @@
 ﻿using MilkTeaManagement.DAL.Entities;
 using System.Windows;
+using System.Diagnostics;
+using System.Windows.Navigation;
 
 namespace MilkTeaManagementUI
 {
@@ -16,9 +18,17 @@ namespace MilkTeaManagementUI
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            ProductNameLabel.Content = Product.Name;
-            QuantityTextBox.Text = "1";
-            ProductPriceLabel.Content = Product.UnitPrice;
+            if (Product != null)
+            {
+                ProductNameLabel.Content = Product.Name;
+                QuantityTextBox.Text = "1";
+                ProductPriceLabel.Content = Product.UnitPrice;
+            }
+            else
+            {
+                HiddenPiece.Visibility = Visibility.Visible;
+                Information.Visibility = Visibility.Hidden;
+            }
         }
 
         private void DecresingButton_Click(object sender, RoutedEventArgs e)
@@ -74,6 +84,16 @@ namespace MilkTeaManagementUI
                 Application.Current.Properties["CurBill"] = curBill;
             }
             this.Close();
+        }
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = e.Uri.AbsoluteUri,
+                UseShellExecute = true 
+            };
+            Process.Start(psi);
+            e.Handled = true;
         }
     }
 }
